@@ -1,7 +1,7 @@
 <?php 
 require("./db.php");
 
-// 
+//  Sub
 $sql = "CREATE TABLE sub (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(500) NOT NULL,
@@ -15,8 +15,6 @@ $sql = "CREATE TABLE sub (
 
 if ($conn->query($sql) === TRUE) {
     echo "Table sub created successfully<br>";
-} else {
-    echo "Error creating table: " . $conn->error;
 }
 
 // seminars
@@ -33,8 +31,6 @@ $sql = "CREATE TABLE sem (
 
 if ($conn->query($sql) === TRUE) {
     echo "Table Sem created successfully<br>";
-} else {
-    echo "Error creating table: " . $conn->error;
 }
 
 // achievement
@@ -50,8 +46,6 @@ $sql = "CREATE TABLE ac (
 
 if ($conn->query($sql) === TRUE) {
     echo "Table Achievement created successfully<br>";
-} else {
-    echo "Error creating table: " . $conn->error;
 }
 
 // lab
@@ -67,8 +61,6 @@ $sql = "CREATE TABLE mou (
     
 if ($conn->query($sql) === TRUE) {
     echo "Table mou created successfully<br>";
-} else {
-    echo "Error creating table: " . $conn->error;
 }
 
 // lab
@@ -83,8 +75,6 @@ $sql = "CREATE TABLE lab (
     
 if ($conn->query($sql) === TRUE) {
     echo "Table Lab created successfully<br>";
-} else {
-    echo "Error creating table: " . $conn->error;
 }
 
 // news
@@ -99,8 +89,6 @@ $sql = "CREATE TABLE news (
     
 if ($conn->query($sql) === TRUE) {
     echo "Table News created successfully<br>";
-} else {
-    echo "Error creating table: " . $conn->error;
 }
 
 // event
@@ -116,8 +104,6 @@ $sql = "CREATE TABLE event (
     
 if ($conn->query($sql) === TRUE) {
     echo "Table Event created successfully<br>";
-} else {
-    echo "Error creating table: " . $conn->error;
 }
 
 
@@ -136,8 +122,6 @@ $sql = "CREATE TABLE staff (
     
 if ($conn->query($sql) === TRUE) {
     echo "Table staff created successfully<br>";
-} else {
-    echo "Error creating table: " . $conn->error;
 }
 
 $conn->close();
