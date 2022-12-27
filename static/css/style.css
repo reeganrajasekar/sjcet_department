@@ -81,3 +81,14 @@ a.active{
 .navbar-toggler{
     border:none;
 }
+/* change transition duration to control the speed of fade effect */
+.carousel-item {
+    -webkit-transition: all 1s ease-in;
+    transition: all 1s ease-in;
+  }
+  
+  .carousel-fade .active.carousel-item-start,
+  .carousel-fade .active.carousel-item-end {
+    transition: opacity 0s 1s;
+
+  }
