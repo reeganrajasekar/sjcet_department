@@ -12,57 +12,6 @@
 
 </head>
 <body>
-    <style>
-        html, body
-        {
-            height: 100%;
-        }
-        footer{
-            position: relative;
-            clear: both;
-        }
-        .col-logo{
-            height:60px; 
-        }
-        /* For Desktop View */
-        @media screen and (min-width: 1024px) {
-            .col-logo{
-                height:60px; 
-            }
-        }
-        
-        /* For Tablet View */
-        @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-            .col-logo{
-                width:40vw;
-                height:auto
-            }
-        }
-        
-        /* For Mobile Phones Portrait or Landscape View */
-        @media screen and (max-device-width: 640px) {
-            .col-logo{
-                width:60vw;
-                height:auto
-            }
-        }
-        .nav-item{
-            font-size:18px;
-            font-weight:600;
-        }
-
-        a.active{
-            color:#922521 !important;
-            font-weight:700;
-            text-shadow:1px 1px 2px #aaa;
-        }
-        .navbar-toggler:focus{
-            box-shadow:none;
-        }
-        .navbar-toggler{
-            border:none;
-        }
-    </style>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top" style="background:white;box-shadow:1px 1px 2px #aaa;">

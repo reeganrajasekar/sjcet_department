@@ -17,3 +17,67 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #aaa; 
   }
+
+html, body
+{
+    height: 100%;
+}
+.col-logo{
+    height:50px; 
+}
+a.active{
+    color:#922521 !important;
+    font-weight:700;
+    text-shadow:1px 1px 1px #aaa;
+}
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+    .col-logo{
+        height:50px; 
+    }
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .col-logo{
+        width:40vw;
+        height:auto
+    }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+    .col-logo{
+        width:60vw;
+        height:auto
+    }
+    .navbar{
+        padding:15px 0px;
+    }
+    .navbar-nav{
+        padding:10px;
+        margin-top:15px;
+        border:1px solid #f0f0f0;
+        border-radius: 5px;
+    }
+    .nav-item{
+        font-size:18px !important;
+    }
+    a.active{
+        color:white !important;
+        padding:10px;
+        border-radius: 5px;
+        background-color: #922521;
+    }
+}
+.nav-item{
+    font-size:16px;
+    font-weight:600;
+}
+
+.navbar-toggler:focus{
+    box-shadow:none;
+}
+.navbar-toggler{
+    border:none;
+}
