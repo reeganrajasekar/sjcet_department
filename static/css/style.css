@@ -93,3 +93,13 @@ a.active {
     margin:3px;
     border-radius: 100% !important;
 }
+.welcome{
+  text-align: center;
+  color:#922521;
+  font-size: 22px;
+  padding-top: 20px;
+  font-weight: 800;
+}
+.content{
+  font-size: 18px;
+}
