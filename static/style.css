@@ -76,6 +76,7 @@ a.active {
   margin-top: 5px;
   margin-bottom: 5px;
   position: relative;
+  border-radius: 10px;
   left: 0;
   opacity: 1;
   transition: all 0.35s ease-out;
@@ -85,6 +86,7 @@ a.active {
   margin-top: 0.3em;
 }
 .navbar-toggler:not(.collapsed) span:nth-child(1) {
+  background-color: #922521;
   transform: translate(15%, -33%) rotate(45deg);
 }
 .navbar-toggler:not(.collapsed) span:nth-child(2) {
@@ -92,6 +94,7 @@ a.active {
 }
 .navbar-toggler:not(.collapsed) span:nth-child(3) {
   transform: translate(15%, 33%) rotate(-45deg) ;
+  background-color: #922521;
 }
 .navbar-toggler span:nth-child(1) {
   transform: translate(0%, 0%) rotate(0deg) ;
@@ -134,5 +137,22 @@ a.active {
   font-weight: 800;
 }
 .content{
-  font-size: 18px;
+  font-size: 18px !important;
+  text-align: justify !important;
+  color:#222;
+  font-weight: 500 !important;
+}
+.heading{
+  font-size: 21px;
+  color:#922521;
+  border-left: 3px solid #922521;
+  line-height: normal;
+  padding-left: 10px;
+  font-weight: 800;
+}
+.program{
+  font-size: 20px;
+  font-weight: 600;
+  color: #922521;
+  text-decoration:underline;
 }
