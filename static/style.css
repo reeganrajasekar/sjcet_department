@@ -156,13 +156,36 @@ a.active {
   color: #922521;
   text-decoration:underline;
 }
-.event{
+.events{
   border:1px solid #ddd;
   box-shadow: 2px 4px 4px #f0f0f0;
   border-radius: 7px;
   padding: 10px;
   min-height: 300px;
-  max-height: 300px;
+}
+.event{
+  border:1px solid #ddd;
+  box-shadow: 2px 4px 8px #ddd;
+  margin:5px;
+  border-radius: 7px;
+}
+.eventimg{
+  height: 150px;
+  overflow: hidden;
+  border-radius: 7px 7px 0px 0px;
+}
+.eventimg img {
+  transition: transform .9s ease;
+}
+.eventimg:hover img {
+  transform: scale(1.5);
+}
+.eventp{
+  text-align: center;
+  font-weight: 700;
+  color:darkred;
+  padding:5px;
+  font-size: 16px;
 }
 .news{
   border:1px solid #ddd;
@@ -170,7 +193,6 @@ a.active {
   border-radius: 7px;
   padding: 10px;
   min-height: 300px;
-  max-height: 300px;
 }
 .holder { 
   background-color:#f9f9f9;
