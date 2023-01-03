@@ -28,19 +28,22 @@
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="/">About</a>
+            <a class="nav-link " aria-current="page" href="/about.php">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="/">Curriculam</a>
+            <a class="nav-link " aria-current="page" href="/curriculam.php">Curriculam</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="/">Infrastructure</a>
+            <a class="nav-link " aria-current="page" href="/infra.php">Infrastructure</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="/">Faculty</a>
+            <a class="nav-link " aria-current="page" href="/faculty.php">Faculty</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="/">Events</a>
+            <a class="nav-link " aria-current="page" href="/activities.php">Activities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/news&events.php">Events & NEWS</a>
           </li>
         </ul>
       </div>
@@ -127,7 +130,7 @@
                 <p style="padding-top: 10px;text-align: left;">Learners are matured in a specific area of specialization by extending their
                    prior knowhow through meticulous set of advanced
                 </p>
-                <a class="btn text-center" style="color:#922521;border:2px solid #922521;border-radius: 15px;;" href="/events.php">View Events</a>
+                <a class="btn text-center" style="color:#922521;border:2px solid #922521;border-radius: 15px;;" href="/news&events.php#event">View Events</a>
               </article>
               <article class="col-sm-12 col-md-6 col-lg-4 mb-1">
                 <div class="event">
@@ -135,6 +138,7 @@
                     <img src="/static/images/bg.webp" alt="" loading="lazy">
                   </div>
                   <p class="eventp">Teacher's Day Celebration</p>
+                  <p class="eventpdate">2022 Sep 5</p>
                 </div>
               </article>
               <article class="col-sm-12 col-md-6 col-lg-4 mb-1">
@@ -143,6 +147,7 @@
                     <img src="/static/images/1.jpg" alt="" loading="lazy">
                   </div>
                   <p class="eventp">Christmas Day Celebration - 2022</p>
+                  <p class="eventpdate">2022 Dec 24</p>
                 </div>
               </article>
             </section>
@@ -168,7 +173,7 @@
                 <li><span>01/10/2007 - </span><a href="#">Problematically, however, the Javascript code</a></li>
               </ul>
             </div>
-            <a href="/news.php" class="btn" style="float: right;color:#922521;text-decoration: underline;">more...</a>
+            <a href="/news&events.php#news" class="btn" style="float: right;color:#922521;text-decoration: underline;">more...</a>
           </div>
         </article>
       </div>
@@ -189,10 +194,12 @@
             <div class="col-lg-3 col-md-6">
                 <h5 class="mb-1 text-white">Quick links</h5>
                 <ul class="list-unstyled text-muted">
-                    <li><a style="color:#fff" href="#">Home</a></li>
-                    <li><a style="color:#fff" href="#">About</a></li>
-                    <li><a style="color:#fff" href="#">Curriculam</a></li>
-                    <li><a style="color:#fff" href="#">Infrastructure</a></li>
+                    <li><a style="color:#fff" href="/">Home</a></li>
+                    <li><a style="color:#fff" href="/about.php">About</a></li>
+                    <li><a style="color:#fff" href="/curriculam.php">Curriculam</a></li>
+                    <li><a style="color:#fff" href="/infra.php">Infrastructure</a></li>
+                    <li><a style="color:#fff" href="/faculty.php">Faculty</a></li>
+                    <li><a style="color:#fff" href="/activities.php">Activities</a></li>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-6">
