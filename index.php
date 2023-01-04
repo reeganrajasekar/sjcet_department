@@ -90,7 +90,7 @@
       </p>
     </section>
     <section style="background-color: #f5f5f5;">
-      <article class="container mt-2" >
+      <article class="container pt-2 pb-2" >
         <br>
         <h1 class="heading">PROGRAMS WE OFFER</h1>
         <article class="container">

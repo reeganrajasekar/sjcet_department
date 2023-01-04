@@ -50,7 +50,7 @@
     </div>
   </nav>
 
-  <main>
+  <main style="margin-top:76px">
     
   </main>
 

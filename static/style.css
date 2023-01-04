@@ -126,7 +126,7 @@ nav{
     border-radius: 8px;
 }
 .carousel-indicators [data-bs-target]{
-    background-color:#ffffff99;
+    background-color:#ffffffdd;
     border: 2px solid #ffd;
     width:13px !important;
     height:13px !important;
