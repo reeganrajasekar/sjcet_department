@@ -19,7 +19,7 @@
         <div class="row">
         <?php
         $results_per_page = 12;   
-        $query = "select * from lab";  
+        $query = "select * from lab WHERE dept='$department'";  
         $result = mysqli_query($conn, $query);  
         $number_of_result = mysqli_num_rows($result);  
         $number_of_page = ceil ($number_of_result / $results_per_page);  
@@ -32,7 +32,7 @@
 
         $page_first_result = ($page-1) * $results_per_page; 
 
-        $sql = "SELECT * FROM lab WHERE dept='CSE' order by id DESC LIMIT " . $page_first_result . ',' . $results_per_page;
+        $sql = "SELECT * FROM lab WHERE dept='$department' order by id DESC LIMIT " . $page_first_result . ',' . $results_per_page;
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {

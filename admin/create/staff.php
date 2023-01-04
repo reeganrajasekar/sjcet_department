@@ -44,7 +44,7 @@ if ($uploadOk == 0) {
         $email = $_POST['email'];
         $place = $_POST['place'];
         $sql = "INSERT INTO staff (name , position ,email , place, pdf , pic , dept)
-        VALUES ('$name' , '$position','$email','$place','$file_name','$imgfile_name', 'CSE')";
+        VALUES ('$name' , '$position','$email','$place','$file_name','$imgfile_name', '$department')";
     
         if ($conn->query($sql) === TRUE) {
             header("Location: /admin/staff.php?page=1&msg=Staff Detail created Successfully !");

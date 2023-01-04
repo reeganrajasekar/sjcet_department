@@ -41,7 +41,7 @@ if ($uploadOk == 0) {
     if (move_uploaded_file($_FILES["img"]["tmp_name"], $imgtarget_file)) {
         $name = $_POST['name'];
         $sql = "INSERT INTO lab (name , pdf , img , dept)
-        VALUES ('$name' ,'$file_name','$imgfile_name', 'CSE')";
+        VALUES ('$name' ,'$file_name','$imgfile_name', '$department')";
     
         if ($conn->query($sql) === TRUE) {
             header("Location: /admin/infra.php?page=1&msg=Lab Detail created Successfully !");

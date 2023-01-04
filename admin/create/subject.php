@@ -8,7 +8,7 @@ $sem = $_POST['sem'];
 $reg = $_POST['reg'];
 $type = $_POST['type'];
 $sql = "INSERT INTO sub (name ,code,sem,reg,type,dept)
-VALUES ('$name','$code','$sem','$reg','$type','CSE')";
+VALUES ('$name','$code','$sem','$reg','$type','$department')";
 
 if ($conn->query($sql) === TRUE) {
     header("Location: /admin/subject.php?page=1&msg=Subject added Successfully !");

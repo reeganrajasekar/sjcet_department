@@ -30,7 +30,7 @@ if ($uploadOk == 0) {
     $content = $_POST['content'];
     $news_date = $_POST['news_date'];
     $sql = "INSERT INTO news (title , pdf , dept , news_date)
-    VALUES ('$content' , '$file_name' , 'CSE' , '$news_date')";
+    VALUES ('$content' , '$file_name' , '$department' , '$news_date')";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: /admin/news.php?page=1&msg=News created Successfully !");

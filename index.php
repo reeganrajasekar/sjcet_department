@@ -31,7 +31,7 @@
             <a class="nav-link " aria-current="page" href="/about.php">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="/curriculam.php">Curriculam</a>
+            <a class="nav-link " aria-current="page" href="/curriculum.php">Curriculum</a>
           </li>
           <li class="nav-item">
             <a class="nav-link " aria-current="page" href="/infra.php">Infrastructure</a>

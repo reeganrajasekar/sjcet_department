@@ -31,7 +31,7 @@
             <a class="nav-link " aria-current="page" href="/about.php">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/curriculam.php">Curriculam</a>
+            <a class="nav-link active" aria-current="page" href="/curriculum.php">Curriculum</a>
           </li>
           <li class="nav-item">
             <a class="nav-link " aria-current="page" href="/infra.php">Infrastructure</a>
@@ -70,7 +70,7 @@
                 <ul class="list-unstyled text-muted">
                     <li><a style="color:#fff" href="/">Home</a></li>
                     <li><a style="color:#fff" href="/about.php">About</a></li>
-                    <li><a style="color:#fff" href="/curriculam.php">Curriculam</a></li>
+                    <li><a style="color:#fff" href="/curriculum.php">Curriculum</a></li>
                     <li><a style="color:#fff" href="/infra.php">Infrastructure</a></li>
                     <li><a style="color:#fff" href="/faculty.php">Faculty</a></li>
                     <li><a style="color:#fff" href="/activities.php">Activities</a></li>

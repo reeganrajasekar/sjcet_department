@@ -42,7 +42,7 @@ if ($uploadOk == 0) {
         $title = $_POST['title'];
         $event_date = $_POST['event_date'];
         $sql = "INSERT INTO event (title , event_date , pdf , img , dept)
-        VALUES ('$title' , '$event_date','$file_name','$imgfile_name', 'CSE')";
+        VALUES ('$title' , '$event_date','$file_name','$imgfile_name', '$department')";
     
         if ($conn->query($sql) === TRUE) {
             header("Location: /admin/event.php?page=1&msg=Event created Successfully !");

@@ -33,7 +33,7 @@
             
 
             $results_per_page = 10;   
-            $query = "select *from sem";  
+            $query = "select *from sem WHERE dept='$department'";  
             $result = mysqli_query($conn, $query);  
             $number_of_result = mysqli_num_rows($result);  
             $number_of_page = ceil ($number_of_result / $results_per_page);  
@@ -46,7 +46,7 @@
 
             $page_first_result = ($page-1) * $results_per_page; 
 
-            $sql = "SELECT * FROM sem WHERE dept='CSE' order by id DESC LIMIT " . $page_first_result . ',' . $results_per_page;
+            $sql = "SELECT * FROM sem WHERE dept='$department' order by id DESC LIMIT " . $page_first_result . ',' . $results_per_page;
             $result = $conn->query($sql);
             if($_GET['page'] && $_GET['page']>1){
                 $i = $_GET['page']*10;

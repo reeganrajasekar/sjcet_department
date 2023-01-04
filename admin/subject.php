@@ -33,7 +33,7 @@
             
 
             $results_per_page = 10;   
-            $query = "select *from sub";  
+            $query = "select *from sub WHERE dept='$department'";  
             $result = mysqli_query($conn, $query);  
             $number_of_result = mysqli_num_rows($result);  
             $number_of_page = ceil ($number_of_result / $results_per_page);  
@@ -46,7 +46,7 @@
 
             $page_first_result = ($page-1) * $results_per_page; 
 
-            $sql = "SELECT * FROM sub WHERE dept='CSE' order by reg DESC, type DESC LIMIT " . $page_first_result . ',' . $results_per_page;
+            $sql = "SELECT * FROM sub WHERE dept='$department' order by reg DESC, type DESC LIMIT " . $page_first_result . ',' . $results_per_page;
             $result = $conn->query($sql);
             if($_GET['page'] && $_GET['page']>1){
                 $i = $_GET['page']*10;

@@ -8,7 +8,7 @@ $org = $_POST['org'];
 $start_date = $_POST['start_date'];
 $end_date = $_POST['end_date'];
 $sql = "INSERT INTO sem (name ,guest, org , start_date , end_date , dept)
-VALUES ('$name','$guest','$org','$start_date','$end_date', 'CSE')";
+VALUES ('$name','$guest','$org','$start_date','$end_date', '$department')";
 
 if ($conn->query($sql) === TRUE) {
     header("Location: /admin/seminar.php?page=1&msg=Achievement added Successfully !");

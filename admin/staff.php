@@ -18,7 +18,7 @@
     <div class="container">
         <div class="row">
         <?php
-        $sql = "SELECT * FROM staff WHERE dept='CSE' order by place ASC";
+        $sql = "SELECT * FROM staff WHERE dept='$department' order by place ASC";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {

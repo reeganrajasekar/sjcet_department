@@ -31,7 +31,7 @@ if ($uploadOk == 0) {
     $content = $_POST['content'];
     $mou_year = $_POST['mou_year'];
     $sql = "INSERT INTO mou (name , content , dept , pdf , mou_year)
-    VALUES ('$name','$content', 'CSE' , '$file_name' , '$mou_year')";
+    VALUES ('$name','$content', '$department' , '$file_name' , '$mou_year')";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: /admin/mou.php?page=1&msg=MoU created Successfully !");

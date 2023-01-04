@@ -8,7 +8,7 @@ $servername = "localhost";
 $username = "root";
 $password = "trysomething";
 $db_name = "sjcet";
-
+$department = 'CSE';
 $conn = new mysqli($servername, $username, $password,$db_name);
 
 if ($conn->connect_error) {
