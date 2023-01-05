@@ -1,3 +1,4 @@
+<?php require("./static/db.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +44,7 @@
             <a class="nav-link " aria-current="page" href="/activities.php">Activities</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="/news&events.php">Events & NEWS</a>
+            <a class="nav-link " aria-current="page" href="/news&events.php">Events & News</a>
           </li>
         </ul>
       </div>
@@ -55,50 +56,23 @@
       <h1 class="heading">Infrastructure</h1>
       <article class="container pt-3">
         <div class="row">
+          <?php
+          $sql = "SELECT * FROM lab WHERE dept='$department' order by id DESC";
+          $result = $conn->query($sql);
+          if ($result->num_rows > 0) {
+              while($row = $result->fetch_assoc()) {
+          ?>
           <div class="col-sm-12 col-md-3 col-lg-4 pb-4">
-            <a href="#"  style="color:gray;text-decoration:none !important;">
+            <a href="/static/uploads/lab/<?php echo $row["pdf"]?>" target="blank"  style="color:gray;text-decoration:none !important;">
               <div class="card shadow" style="width:100%">
-                <img loading="lazy" src="/static/images/1.jpg" class="card-img-top" alt="...">
+                <img loading="lazy" src="/static/uploads/lab/image/<?php echo $row["img"]?>" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title text-center">Computer Networks Lab</h5>
+                  <h5 class="card-title text-center"><?php echo $row["name"]?></h5>
                 </div>
               </div>
             </a>
           </div>
-
-          <div class="col-sm-12 col-md-3 col-lg-4 pb-4">
-            <a href="#"  style="color:gray;text-decoration:none !important;">
-              <div class="card shadow" style="width:100%">
-                <img loading="lazy" src="/static/images/1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Computer Networks Lab</h5>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-sm-12 col-md-3 col-lg-4 pb-4">
-            <a href="#"  style="color:gray;text-decoration:none !important;">
-              <div class="card shadow" style="width:100%">
-                <img loading="lazy" src="/static/images/1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Computer Networks Lab</h5>
-                </div>
-              </div>
-            </a>
-          </div>
-
-
-          <div class="col-sm-12 col-md-3 col-lg-4 pb-4">
-            <a href="#"  style="color:gray;text-decoration:none !important;">
-              <div class="card shadow" style="width:100%">
-                <img loading="lazy" src="/static/images/1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Computer Networks Lab</h5>
-                </div>
-              </div>
-            </a>
-          </div>
+          <?php }} ?>
         </div>
       </article>
     </section>

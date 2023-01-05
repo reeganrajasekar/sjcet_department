@@ -1,3 +1,4 @@
+<?php require("./static/db.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,57 +56,27 @@
     <h1 class="heading container">Our Curriculum</h1>
       <div class="container pt-4">
         <ul class="timeline">
+          <?php
+          $sql = "SELECT DISTINCT reg FROM sub WHERE dept='$department'";
+          $result = $conn->query($sql);
+          if ($result->num_rows > 0) {
+              while($row = $result->fetch_assoc()) {
+          ?>
           <li class="timeline-item mb-5">
-            <h5 class="fw-bold" style="color:darkred;">Regulation - 2021</h5>
-            <ul class="timeline">
-              <li class="timeline-item mb-2">
-                <h5 class="fw-bold">Semester - I</h5>
-                <ol class="text-muted">
-                  <li>CS8600 - Computer Networks</li>
-                  <li>CS8600 - Computer Networks</li>
-                  <li>CS8600 - Computer Networks</li>
-                  <li>CS8600 - Computer Networks</li>
-                  <li>CS8601 - Computer Networks Lab</li>
-                </ol>
-              </li>
-              <li class="timeline-item mb-2">
-                <h5 class="fw-bold">Semester - II</h5>
-                <ol class="text-muted">
-                  <li>CS8600 - Computer Networks</li>
-                  <li>CS8600 - Computer Networks</li>
-                  <li>CS8600 - Computer Networks</li>
-                  <li>CS8600 - Computer Networks</li>
-                  <li>CS8601 - Computer Networks Lab</li>
-                </ol>
-              </li>
+            <h5 class="fw-bold" style="color:darkred;">Regulation - <?php echo $row['reg']?></h5>
+            <ul class="text-muted">
+              <?php
+              $reg = $row['reg'];
+              $sql1 = "SELECT * FROM sub WHERE reg='$reg' AND dept='$department' order by sem ASC ,type DESC";
+              $result1 = $conn->query($sql1);
+              if ($result1->num_rows > 0) {
+                  while($row1 = $result1->fetch_assoc()) {
+              ?>
+                <li>Semester <?php echo $row1['sem']?> - <?php echo $row1['code']?> - <?php echo $row1['name']?> (<?php echo $row1['type']?>)</li>
+              <?php }} ?>
             </ul>
           </li>
-
-          <li class="timeline-item mb-5">
-            <h5 class="fw-bold"  style="color:darkred;">Regulation - 2017</h5>
-            <ul class="timeline">
-              <li class="timeline-item mb-2">
-                <h5 class="fw-bold">Semester - I</h5>
-                <ol class="text-muted">
-                  <li>CS8600 - Computer Networks</li>
-                  <li>CS8600 - Computer Networks</li>
-                  <li>CS8600 - Computer Networks</li>
-                  <li>CS8600 - Computer Networks</li>
-                  <li>CS8601 - Computer Networks Lab</li>
-                </ol>
-              </li>
-              <li class="timeline-item mb-2">
-                <h5 class="fw-bold">Semester - II</h5>
-                <ol class="text-muted">
-                  <li>CS8600 - Computer Networks</li>
-                  <li>CS8600 - Computer Networks</li>
-                  <li>CS8600 - Computer Networks</li>
-                  <li>CS8600 - Computer Networks</li>
-                  <li>CS8601 - Computer Networks Lab</li>
-                </ol>
-              </li>
-            </ul>
-          </li>
+          <?php }} ?>
         </ul>
       </div>
     </section>

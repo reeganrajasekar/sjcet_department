@@ -1,3 +1,4 @@
+<?php require("./static/db.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,16 +44,57 @@
             <a class="nav-link " aria-current="page" href="/activities.php">Activities</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/news&events.php">Events & NEWS</a>
+            <a class="nav-link active" aria-current="page" href="/news&events.php">Events & News</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <main  id="event">
-    
+  <main class="container" style="margin-top:76px">
+    <section id="news" class="pt-3 pb-2">
+      <h1 class="heading">News</h1>
+      <article style="width:100%;border:1px solid #f0f0f0;border-radius:10px;background-color:#f5f5f5;padding:10px">
+        <ul >
+          <?php
+          $sql = "SELECT * FROM news WHERE dept='$department' order by id DESC";
+          $result = $conn->query($sql);
+          if ($result->num_rows > 0) {
+              while($row = $result->fetch_assoc()) {
+          ?>
+            <li><span><?php echo $row['news_date']?> - </span><a target="blank" href="/static/uploads/<?php echo $row['pdf']?>"><?php echo $row['title']?></a></li>
+          <?php }} ?>
+        </ul>
+      </article>
+    </section>
+
+    <section id="event" class="pt-3">
+      <h1 class="heading">Events</h1>
+      <article class="container pt-3">
+        <div class="row">
+          <?php
+          $sql = "SELECT * FROM event WHERE dept='$department' order by id DESC";
+          $result = $conn->query($sql);
+          if ($result->num_rows > 0) {
+              while($row = $result->fetch_assoc()) {
+          ?>
+          <div class="col-sm-12 col-md-6 col-lg-3 pb-4">
+            <a href="/static/uploads/event/<?php echo $row['pdf']?>" target="blank"  style="color:#444;text-decoration:none !important;">
+              <div class="card shadow" style="width:100%">
+                <img loading="lazy" src="/static/uploads/event/image/<?php echo $row['img']?>" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center"><?php echo $row['title']?></h5>
+                  <p class="text-muted text-center"><?php echo $row['event_date']?></p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <?php }} ?>
+        </div>
+      </article>
+    </section>
   </main>
+
 
   <footer class="w-100 pt-4 mt-2 flex-shrink-0" style="background-color: #444;">
     <div class="container">

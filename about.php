@@ -1,3 +1,4 @@
+<?php require("./static/db.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +44,7 @@
             <a class="nav-link " aria-current="page" href="/activities.php">Activities</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="/news&events.php">Events & NEWS</a>
+            <a class="nav-link " aria-current="page" href="/news&events.php">Events & News</a>
           </li>
         </ul>
       </div>
@@ -103,7 +104,14 @@
       <article class="row">
         <div class="col-sm-12 col-md-12 col-lg-3 pt-2 pb-2">
           <div style="display:flex;align-items:center;flex-direction:column;height:100%;justify-content:center">
-            <img src="/static/images/hod.jpg" width="100%" height="auto" class="hod-img" alt="">
+            <?php
+            $sql = "SELECT * FROM staff WHERE place='1' AND dept='$department' limit 1";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+            ?>
+              <img src="/static/uploads/staff/image/<?php echo $row['pic'] ?>" width="100%" height="auto" class="hod-img" alt="">
+            <?php }} ?>
             <p class="hod">Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,</p>
           </div>
         </div>

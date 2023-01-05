@@ -1,3 +1,4 @@
+<?php require("./static/db.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +44,7 @@
             <a class="nav-link " aria-current="page" href="/activities.php">Activities</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="/news&events.php">Events & NEWS</a>
+            <a class="nav-link " aria-current="page" href="/news&events.php">Events & News</a>
           </li>
         </ul>
       </div>
@@ -57,16 +58,24 @@
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active" >
         <img src="/static/images/1.jpg" class="d-block w-100" loading="lazy" alt="Slide_1">
       </div>
       <div class="carousel-item">
-        <img src="/static/images/1.jpg" class="d-block w-100" loading="lazy" alt="Slide_2">
+        <img src="/static/images/1.jpg" class="d-block w-100" alt="Slide_2">
       </div>
       <div class="carousel-item">
-        <img src="/static/images/1.jpg" class="d-block w-100" loading="lazy" alt="Slide_3">
+        <img src="/static/images/1.jpg" class="d-block w-100" alt="Slide_3">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/images/1.jpg" class="d-block w-100" alt="Slide_4">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/images/1.jpg" class="d-block w-100" alt="Slide_5">
       </div>
     </div>
   </div>
@@ -132,45 +141,41 @@
                 </p>
                 <a class="btn text-center" style="color:#922521;border:2px solid #922521;border-radius: 15px;;" href="/news&events.php#event">View Events</a>
               </article>
+              <?php
+              $sql = "SELECT * FROM event WHERE dept='$department' order by id DESC LIMIT 2";
+              $result = $conn->query($sql);
+              if ($result->num_rows > 0) {
+                  while($row = $result->fetch_assoc()) {
+              ?>
               <article class="col-sm-12 col-md-6 col-lg-4 mb-1">
                 <div class="event">
                   <div class="eventimg">
-                    <img src="/static/images/bg.webp" alt="" loading="lazy">
+                    <img src="/static/uploads/event/image/<?php echo $row['img']?>" alt="" loading="lazy">
                   </div>
-                  <p class="eventp">Teacher's Day Celebration</p>
-                  <p class="eventpdate">2022 Sep 5</p>
+                  <a href="/static/uploads/event/<?php echo $row['pdf']?>" target="blank" style="text-decoration:none">
+                    <p class="eventp"><?php echo $row['title']?></p>
+                  </a>
+                  <p class="eventpdate"><?php echo $row['event_date']?></p>
                 </div>
               </article>
-              <article class="col-sm-12 col-md-6 col-lg-4 mb-1">
-                <div class="event">
-                  <div class="eventimg">
-                    <img src="/static/images/1.jpg" alt="" loading="lazy">
-                  </div>
-                  <p class="eventp">Christmas Day Celebration - 2022</p>
-                  <p class="eventpdate">2022 Dec 24</p>
-                </div>
-              </article>
+              <?php }} ?>
             </section>
           </div>
         </article>
         <article class="col-sm-12 col-md-12 col-lg-4 mb-2">
           <div class="news">
-            <h1 class="heading">Department NEWS</h1>
+            <h1 class="heading">Department News</h1>
             <hr>
             <div class="holder">
               <ul id="ticker01">
-                <li><span>10/10/2007 - </span><a href="#">The first thing that most Javascript programmers</a></li>
-                <li><span>10/10/2007 - </span><a href="#">End up doing is adding some code</a></li>
-                <li><span>10/10/2007 - </span><a href="#">The code that you want to run</a></li>
-                <li><span>08/10/2007 - </span><a href="#">Inside of which is the code that you want to run</a></li>
-                <li><span>08/10/2007 - </span><a href="#">Right when the page is loaded</a></li>
-                <li><span>05/10/2007 - </span><a href="#">Problematically, however, the Javascript code</a></li>
-                <li><span>04/10/2007 - </span><a href="#">The first thing that most Javascript programmers</a></li>
-                <li><span>04/10/2007 - </span><a href="#">End up doing is adding some code</a></li>
-                <li><span>04/10/2007 - </span><a href="#">The code that you want to run</a></li>
-                <li><span>03/10/2007 - </span><a href="#">Inside of which is the code that you want to run</a></li>
-                <li><span>03/10/2007 - </span><a href="#">Right when the page is loaded</a></li>
-                <li><span>01/10/2007 - </span><a href="#">Problematically, however, the Javascript code</a></li>
+                <?php
+                $sql = "SELECT * FROM news WHERE dept='$department' order by id DESC";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                ?>
+                <li><span><?php echo $row['news_date']?> - </span><a target="blank" href="/static/uploads/<?php echo $row['pdf']?>"><?php echo $row['title']?></a></li>
+                <?php }} ?>
               </ul>
             </div>
             <a href="/news&events.php#news" class="btn" style="float: right;color:#922521;text-decoration: underline;">more...</a>

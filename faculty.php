@@ -1,3 +1,4 @@
+<?php require("./static/db.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +44,7 @@
             <a class="nav-link " aria-current="page" href="/activities.php">Activities</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="/news&events.php">Events & NEWS</a>
+            <a class="nav-link " aria-current="page" href="/news&events.php">Events & News</a>
           </li>
         </ul>
       </div>
@@ -54,50 +55,26 @@
     <section class="container pt-4 pb-4">
       <h1 class="heading">Faculty</h1>
       <div class="row pt-2">
-        <div class="col-sm-12 col-md-12 col-lg-3 text-center  ">
-          <img src="/static/images/hod.jpg" loading="lazy" class="staff" alt="">
-          <p class="text-muted pt-2">
-            <span style="color:#444;">Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,</span>
-            <br>
-            Assistent Prof
-          </p>
-        </div>
+        <?php
+        $sql = "SELECT * FROM staff WHERE NOT place='1' AND dept='$department' order by place ASC";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+        ?>
+        <div class="col-sm-12 col-md-12 col-lg-3 text-center ">
+          <a href="/static/uploads/staff/<?php echo $row['pdf']?>" target="blank" style="text-decoration:none">
+            <img src="/static/uploads/staff/image/<?php echo $row['pic']?>" loading="lazy" class="staff" alt="">
+            <p class="text-muted pt-2">
+              <span style="color:#444;"><?php echo $row['name']?></span>
+              <br>
+              <?php echo $row['position']?>
+              <br>
+              <?php echo $row['email']?>
 
-        <div class="col-sm-12 col-md-12 col-lg-3 text-center  ">
-          <img src="/static/images/hod.jpg" loading="lazy" class="staff" alt="">
-          <p class="text-muted pt-2">
-            <span style="color:#444;">Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,</span>
-            <br>
-            Assistent Prof
-          </p>
+            </p>
+          </a>
         </div>
-
-        <div class="col-sm-12 col-md-12 col-lg-3 text-center  ">
-          <img src="/static/images/hod.jpg" loading="lazy" class="staff" alt="">
-          <p class="text-muted pt-2">
-            <span style="color:#444;">Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,</span>
-            <br>
-            Assistent Prof
-          </p>
-        </div>
-
-        <div class="col-sm-12 col-md-12 col-lg-3 text-center  ">
-          <img src="/static/images/hod.jpg" loading="lazy" class="staff" alt="">
-          <p class="text-muted pt-2">
-            <span style="color:#444;">Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,</span>
-            <br>
-            Assistent Prof
-          </p>
-        </div>
-
-        <div class="col-sm-12 col-md-12 col-lg-3 text-center  ">
-          <img src="/static/images/hod.jpg" loading="lazy" class="staff" alt="">
-          <p class="text-muted pt-2">
-            <span style="color:#444;">Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,</span>
-            <br>
-            Assistent Prof
-          </p>
-        </div>
+        <?php }} ?>
       </div>
     </section>
   </main>

@@ -1,3 +1,4 @@
+<?php require("./static/db.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +44,7 @@
             <a class="nav-link active" aria-current="page" href="/activities.php">Activities</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="/news&events.php">Events & NEWS</a>
+            <a class="nav-link " aria-current="page" href="/news&events.php">Events & News</a>
           </li>
         </ul>
       </div>
@@ -60,25 +61,39 @@
               <li class="timeline-item mb-2">
                 <h2 class="text-muted" style="font-size:18px !important;font-weight:600">Student Achievements</h2>
                 <ul>
+                  <?php
+                  $sql = "SELECT * FROM ac WHERE dept='$department' AND title='student' order by id DESC";
+                  $result = $conn->query($sql);
+                  if ($result->num_rows > 0) {
+                      while($row = $result->fetch_assoc()) {
+                  ?>
                   <li>
                     <p style="color:#333 !important">
-                      <span class="text-muted">Name :</span> Reegan Rajasekar<br>
-                      <span class="text-muted">Achievement :</span> 1st prize in Sports<br>
-                      <span class="text-muted">Date :</span> 22 Dec 2022
+                      <span class="text-muted">Name :</span><?php echo $row["name"] ?><br>
+                      <span class="text-muted">Description :</span><?php echo $row["content"] ?><br>
+                      <span class="text-muted">Date :</span><?php echo $row["ac_date"] ?>
                     </p>
                   </li>
+                  <?php }} ?>
                 </ul>
               </li>
               <li class="timeline-item mb-2">
                 <h2 class="text-muted" style="font-size:18px !important;font-weight:600">Staff Achievements</h2>
                 <ul>
+                  <?php
+                  $sql = "SELECT * FROM ac WHERE dept='$department' AND title='staff' order by id DESC";
+                  $result = $conn->query($sql);
+                  if ($result->num_rows > 0) {
+                      while($row = $result->fetch_assoc()) {
+                  ?>
                   <li>
                     <p style="color:#333 !important">
-                      <span class="text-muted">Name :</span> Reegan Rajasekar<br>
-                      <span class="text-muted">Achievement :</span> 1st prize in Sports<br>
-                      <span class="text-muted">Date :</span> 22 Dec 2022
+                      <span class="text-muted">Name :</span><?php echo $row["name"] ?><br>
+                      <span class="text-muted">Description :</span><?php echo $row["content"] ?><br>
+                      <span class="text-muted">Date :</span><?php echo $row["ac_date"] ?>
                     </p>
                   </li>
+                  <?php }} ?>
                 </ul>
               </li>
             </ul>
@@ -91,30 +106,21 @@
           <h1 class="heading">Seminar & Conference</h1>
           <article class="container pt-2">
             <ul class="timeline">
+              <?php 
+              $sql = "SELECT * FROM sem WHERE dept='$department' order by id DESC";
+              $result = $conn->query($sql);
+              if ($result->num_rows > 0) {
+                  while($row = $result->fetch_assoc()) {
+              ?>
               <li class="timeline-item mb-2">
                 <p style="color:#333 !important">
-                  <span class="text-muted">Event :</span>Python Programming Class<br>
-                  <span class="text-muted">Guest Name :</span>Reegan Rajasekar<br>
-                  <span class="text-muted">Organized by:</span> CSE<br>
-                  <span class="text-muted">Date:</span> 22 Dec 2022 - 23 Dec 2022
+                  <span class="text-muted">Event :</span><?php echo $row['name'] ?><br>
+                  <span class="text-muted">Guest Name :</span><?php echo $row['guest'] ?><br>
+                  <span class="text-muted">Organized by:</span><?php echo $row['org'] ?><br>
+                  <span class="text-muted">Date:</span><?php echo($row['start_date']." - ".$row['end_date']) ?>
                 </p>
               </li>
-              <li class="timeline-item mb-2">
-                <p style="color:#333 !important">
-                  <span class="text-muted">Event :</span>Python Programming Class<br>
-                  <span class="text-muted">Guest Name :</span>Reegan Rajasekar<br>
-                  <span class="text-muted">Organized by:</span> CSE<br>
-                  <span class="text-muted">Date:</span> 22 Dec 2022 - 23 Dec 2022
-                </p>
-              </li>
-              <li class="timeline-item mb-2">
-                <p style="color:#333 !important">
-                  <span class="text-muted">Event :</span>Python Programming Class<br>
-                  <span class="text-muted">Guest Name :</span>Reegan Rajasekar<br>
-                  <span class="text-muted">Organized by:</span> CSE<br>
-                  <span class="text-muted">Date:</span> 22 Dec 2022 - 23 Dec 2022
-                </p>
-              </li>
+              <?php }} ?>
             </ul>
           </article>
         </section>
@@ -124,34 +130,22 @@
             <h1 class="heading">MoUs</h1>
             <article class="container pt-2">
               <ul class="timeline">
-                <li class="timeline-item mb-2">
-                  <p style="color:#333 !important">
-                    <span class="text-muted">Company Name :</span> Brand<br>
-                    <span class="text-muted">Details :</span> ahbaukyx uw87h x87 h<br>
-                    <span class="text-muted">Year :</span> 2022
-                  </p>
-                </li>
-                <li class="timeline-item mb-2">
-                  <p style="color:#333 !important">
-                    <span class="text-muted">Company Name :</span> Brand<br>
-                    <span class="text-muted">Details :</span> ahbaukyx uw87h x87 h<br>
-                    <span class="text-muted">Year :</span> 2022
-                  </p>
-                </li>
-                <li class="timeline-item mb-2">
-                  <p style="color:#333 !important">
-                    <span class="text-muted">Company Name :</span> Brand<br>
-                    <span class="text-muted">Details :</span> ahbaukyx uw87h x87 h<br>
-                    <span class="text-muted">Year :</span> 2022
-                  </p>
-                </li>
-                <li class="timeline-item mb-2">
-                  <p style="color:#333 !important">
-                    <span class="text-muted">Company Name :</span> Brand<br>
-                    <span class="text-muted">Details :</span> ahbaukyx uw87h x87 h<br>
-                    <span class="text-muted">Year :</span> 2022
-                  </p>
-                </li>
+                <?php
+                $sql = "SELECT * FROM mou WHERE dept='$department' order by id DESC ";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                ?>
+                <a href="/static/uploads/mou/<?php echo $row['pdf']?>" style="text-decoration:none" target="blank">
+                  <li class="timeline-item mb-2">
+                    <p style="color:#333 !important">
+                      <span class="text-muted">Company Name :</span><?php echo $row['name']?><br>
+                      <span class="text-muted">Details :</span><?php echo $row['content']?><br>
+                      <span class="text-muted">Year :</span><?php echo $row['mou_year']?>
+                    </p>
+                  </li>
+                </a>
+                <?php }} ?>
               </ul>
             </article>
           </section>
