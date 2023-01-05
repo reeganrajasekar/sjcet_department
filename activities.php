@@ -50,7 +50,115 @@
     </div>
   </nav>
 
-  <main>
+  <main style="margin-top:76px">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-4">
+        <section class="container pt-4" style="width:100% !important;">
+          <h1 class="heading">Achievements</h1>
+          <article class="container pt-2">
+            <ul class="timeline">
+              <li class="timeline-item mb-2">
+                <h2 class="text-muted" style="font-size:18px !important;font-weight:600">Student Achievements</h2>
+                <ul>
+                  <li>
+                    <p style="color:#333 !important">
+                      <span class="text-muted">Name :</span> Reegan Rajasekar<br>
+                      <span class="text-muted">Achievement :</span> 1st prize in Sports<br>
+                      <span class="text-muted">Date :</span> 22 Dec 2022
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li class="timeline-item mb-2">
+                <h2 class="text-muted" style="font-size:18px !important;font-weight:600">Staff Achievements</h2>
+                <ul>
+                  <li>
+                    <p style="color:#333 !important">
+                      <span class="text-muted">Name :</span> Reegan Rajasekar<br>
+                      <span class="text-muted">Achievement :</span> 1st prize in Sports<br>
+                      <span class="text-muted">Date :</span> 22 Dec 2022
+                    </p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+        </section>
+      </div>
+
+      <div class="col-sm-12 col-md-12 col-lg-4">
+        <section class="container pt-4" style="width:100% !important;">
+          <h1 class="heading">Seminar & Conference</h1>
+          <article class="container pt-2">
+            <ul class="timeline">
+              <li class="timeline-item mb-2">
+                <p style="color:#333 !important">
+                  <span class="text-muted">Event :</span>Python Programming Class<br>
+                  <span class="text-muted">Guest Name :</span>Reegan Rajasekar<br>
+                  <span class="text-muted">Organized by:</span> CSE<br>
+                  <span class="text-muted">Date:</span> 22 Dec 2022 - 23 Dec 2022
+                </p>
+              </li>
+              <li class="timeline-item mb-2">
+                <p style="color:#333 !important">
+                  <span class="text-muted">Event :</span>Python Programming Class<br>
+                  <span class="text-muted">Guest Name :</span>Reegan Rajasekar<br>
+                  <span class="text-muted">Organized by:</span> CSE<br>
+                  <span class="text-muted">Date:</span> 22 Dec 2022 - 23 Dec 2022
+                </p>
+              </li>
+              <li class="timeline-item mb-2">
+                <p style="color:#333 !important">
+                  <span class="text-muted">Event :</span>Python Programming Class<br>
+                  <span class="text-muted">Guest Name :</span>Reegan Rajasekar<br>
+                  <span class="text-muted">Organized by:</span> CSE<br>
+                  <span class="text-muted">Date:</span> 22 Dec 2022 - 23 Dec 2022
+                </p>
+              </li>
+            </ul>
+          </article>
+        </section>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-4">
+          <section class="container pt-4" style="width:100% !important;">
+            <h1 class="heading">MoUs</h1>
+            <article class="container pt-2">
+              <ul class="timeline">
+                <li class="timeline-item mb-2">
+                  <p style="color:#333 !important">
+                    <span class="text-muted">Company Name :</span> Brand<br>
+                    <span class="text-muted">Details :</span> ahbaukyx uw87h x87 h<br>
+                    <span class="text-muted">Year :</span> 2022
+                  </p>
+                </li>
+                <li class="timeline-item mb-2">
+                  <p style="color:#333 !important">
+                    <span class="text-muted">Company Name :</span> Brand<br>
+                    <span class="text-muted">Details :</span> ahbaukyx uw87h x87 h<br>
+                    <span class="text-muted">Year :</span> 2022
+                  </p>
+                </li>
+                <li class="timeline-item mb-2">
+                  <p style="color:#333 !important">
+                    <span class="text-muted">Company Name :</span> Brand<br>
+                    <span class="text-muted">Details :</span> ahbaukyx uw87h x87 h<br>
+                    <span class="text-muted">Year :</span> 2022
+                  </p>
+                </li>
+                <li class="timeline-item mb-2">
+                  <p style="color:#333 !important">
+                    <span class="text-muted">Company Name :</span> Brand<br>
+                    <span class="text-muted">Details :</span> ahbaukyx uw87h x87 h<br>
+                    <span class="text-muted">Year :</span> 2022
+                  </p>
+                </li>
+              </ul>
+            </article>
+          </section>
+        </div>
+      </div>
+    </div>
+    
     
   </main>
 
@@ -60,7 +168,7 @@
             <div class="col-lg-5 col-md-6">
                 <h5 style="color:#fff">Contact Us</h5>
                 <p class="small text-white">
-                  &andd; A.S Nagar, Elupatti, Thanjavur - 613 403, Tamil Nadu.<br>
+                  A.S Nagar, Elupatti, Thanjavur - 613 403, Tamil Nadu.<br>
                   9444395284, 9150076739<br>
                   sjcet.tnj@gmail.com
                 </p>
@@ -86,8 +194,6 @@
       <small>2023 &copy; St. Joseph's College of Engineering & Technology | All Rights Reserved | Powered By SJCET Web Team</small>
     </div>
   </footer>
-
-
   <script src="/static/js/bootstrap.bundle.js"></script>
   <script src="/static/js/jquery.min.js"></script>
   <script src="/static/script.js"></script>

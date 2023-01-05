@@ -57,7 +57,7 @@
         <div class="col-sm-12 col-md-12 col-lg-3 text-center  ">
           <img src="/static/images/hod.jpg" loading="lazy" class="staff" alt="">
           <p class="text-muted pt-2">
-            Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,
+            <span style="color:#444;">Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,</span>
             <br>
             Assistent Prof
           </p>
@@ -66,7 +66,7 @@
         <div class="col-sm-12 col-md-12 col-lg-3 text-center  ">
           <img src="/static/images/hod.jpg" loading="lazy" class="staff" alt="">
           <p class="text-muted pt-2">
-            Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,
+            <span style="color:#444;">Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,</span>
             <br>
             Assistent Prof
           </p>
@@ -75,7 +75,7 @@
         <div class="col-sm-12 col-md-12 col-lg-3 text-center  ">
           <img src="/static/images/hod.jpg" loading="lazy" class="staff" alt="">
           <p class="text-muted pt-2">
-            Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,
+            <span style="color:#444;">Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,</span>
             <br>
             Assistent Prof
           </p>
@@ -84,7 +84,7 @@
         <div class="col-sm-12 col-md-12 col-lg-3 text-center  ">
           <img src="/static/images/hod.jpg" loading="lazy" class="staff" alt="">
           <p class="text-muted pt-2">
-            Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,
+            <span style="color:#444;">Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,</span>
             <br>
             Assistent Prof
           </p>
@@ -93,7 +93,7 @@
         <div class="col-sm-12 col-md-12 col-lg-3 text-center  ">
           <img src="/static/images/hod.jpg" loading="lazy" class="staff" alt="">
           <p class="text-muted pt-2">
-            Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,
+            <span style="color:#444;">Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,</span>
             <br>
             Assistent Prof
           </p>
@@ -108,7 +108,7 @@
             <div class="col-lg-5 col-md-6">
                 <h5 style="color:#fff">Contact Us</h5>
                 <p class="small text-white">
-                  &andd; A.S Nagar, Elupatti, Thanjavur - 613 403, Tamil Nadu.<br>
+                  A.S Nagar, Elupatti, Thanjavur - 613 403, Tamil Nadu.<br>
                   9444395284, 9150076739<br>
                   sjcet.tnj@gmail.com
                 </p>
