@@ -50,8 +50,58 @@
     </div>
   </nav>
 
-  <main>
-    
+  <main style="margin-top:76px">
+    <section class="container pt-4 pb-4">
+      <h1 class="heading">Infrastructure</h1>
+      <article class="container pt-3">
+        <div class="row">
+          <div class="col-sm-12 col-md-3 col-lg-4 pb-4">
+            <a href="#"  style="color:gray;text-decoration:none !important;">
+              <div class="card shadow" style="width:100%">
+                <img loading="lazy" src="/static/images/1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Computer Networks Lab</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-12 col-md-3 col-lg-4 pb-4">
+            <a href="#"  style="color:gray;text-decoration:none !important;">
+              <div class="card shadow" style="width:100%">
+                <img loading="lazy" src="/static/images/1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Computer Networks Lab</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-12 col-md-3 col-lg-4 pb-4">
+            <a href="#"  style="color:gray;text-decoration:none !important;">
+              <div class="card shadow" style="width:100%">
+                <img loading="lazy" src="/static/images/1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Computer Networks Lab</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
+
+          <div class="col-sm-12 col-md-3 col-lg-4 pb-4">
+            <a href="#"  style="color:gray;text-decoration:none !important;">
+              <div class="card shadow" style="width:100%">
+                <img loading="lazy" src="/static/images/1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Computer Networks Lab</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
   </main>
 
   <footer class="w-100 pt-4 mt-2 flex-shrink-0" style="background-color: #444;">

@@ -50,8 +50,65 @@
     </div>
   </nav>
 
-  <main>
-    
+  <main style="margin-top:76px">
+    <section class="container pt-4">
+    <h1 class="heading container">Our Curriculum</h1>
+      <div class="container pt-4">
+        <ul class="timeline">
+          <li class="timeline-item mb-5">
+            <h5 class="fw-bold" style="color:darkred;">Regulation - 2021</h5>
+            <ul class="timeline">
+              <li class="timeline-item mb-2">
+                <h5 class="fw-bold">Semester - I</h5>
+                <ol class="text-muted">
+                  <li>CS8600 - Computer Networks</li>
+                  <li>CS8600 - Computer Networks</li>
+                  <li>CS8600 - Computer Networks</li>
+                  <li>CS8600 - Computer Networks</li>
+                  <li>CS8601 - Computer Networks Lab</li>
+                </ol>
+              </li>
+              <li class="timeline-item mb-2">
+                <h5 class="fw-bold">Semester - II</h5>
+                <ol class="text-muted">
+                  <li>CS8600 - Computer Networks</li>
+                  <li>CS8600 - Computer Networks</li>
+                  <li>CS8600 - Computer Networks</li>
+                  <li>CS8600 - Computer Networks</li>
+                  <li>CS8601 - Computer Networks Lab</li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+
+          <li class="timeline-item mb-5">
+            <h5 class="fw-bold"  style="color:darkred;">Regulation - 2017</h5>
+            <ul class="timeline">
+              <li class="timeline-item mb-2">
+                <h5 class="fw-bold">Semester - I</h5>
+                <ol class="text-muted">
+                  <li>CS8600 - Computer Networks</li>
+                  <li>CS8600 - Computer Networks</li>
+                  <li>CS8600 - Computer Networks</li>
+                  <li>CS8600 - Computer Networks</li>
+                  <li>CS8601 - Computer Networks Lab</li>
+                </ol>
+              </li>
+              <li class="timeline-item mb-2">
+                <h5 class="fw-bold">Semester - II</h5>
+                <ol class="text-muted">
+                  <li>CS8600 - Computer Networks</li>
+                  <li>CS8600 - Computer Networks</li>
+                  <li>CS8600 - Computer Networks</li>
+                  <li>CS8600 - Computer Networks</li>
+                  <li>CS8601 - Computer Networks Lab</li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer class="w-100 pt-4 mt-2 flex-shrink-0" style="background-color: #444;">

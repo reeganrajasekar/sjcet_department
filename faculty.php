@@ -50,8 +50,56 @@
     </div>
   </nav>
 
-  <main>
-    
+  <main style="margin-top:76px">
+    <section class="container pt-4 pb-4">
+      <h1 class="heading">Faculty</h1>
+      <div class="row pt-2">
+        <div class="col-sm-12 col-md-12 col-lg-3 text-center  ">
+          <img src="/static/images/hod.jpg" loading="lazy" class="staff" alt="">
+          <p class="text-muted pt-2">
+            Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,
+            <br>
+            Assistent Prof
+          </p>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-3 text-center  ">
+          <img src="/static/images/hod.jpg" loading="lazy" class="staff" alt="">
+          <p class="text-muted pt-2">
+            Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,
+            <br>
+            Assistent Prof
+          </p>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-3 text-center  ">
+          <img src="/static/images/hod.jpg" loading="lazy" class="staff" alt="">
+          <p class="text-muted pt-2">
+            Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,
+            <br>
+            Assistent Prof
+          </p>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-3 text-center  ">
+          <img src="/static/images/hod.jpg" loading="lazy" class="staff" alt="">
+          <p class="text-muted pt-2">
+            Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,
+            <br>
+            Assistent Prof
+          </p>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-3 text-center  ">
+          <img src="/static/images/hod.jpg" loading="lazy" class="staff" alt="">
+          <p class="text-muted pt-2">
+            Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,
+            <br>
+            Assistent Prof
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="w-100 pt-4 mt-2 flex-shrink-0" style="background-color: #444;">
