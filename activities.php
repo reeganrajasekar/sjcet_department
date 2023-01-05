@@ -9,13 +9,14 @@
   <link rel="stylesheet" href="/static/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/style.css">
   <link rel="icon" href="/static/images/favicon.png">
+  <script src="/static/js/moment.js"></script>
 </head>
 
 <body>
 <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg " style="z-index:10000;background:white;box-shadow:1px 1px 2px #aaa;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="">
+      <a class="navbar-brand" href="http://sjcettnj.edu.in">
         <img src="/static/images/logo.png" alt="College Logo" class="col-logo">
       </a>
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +63,7 @@
                 <h2 class="text-muted" style="font-size:18px !important;font-weight:600">Student Achievements</h2>
                 <ul>
                   <?php
-                  $sql = "SELECT * FROM ac WHERE dept='$department' AND title='student' order by id DESC";
+                  $sql = "SELECT * FROM ac WHERE dept='$department' AND title='student' order by id DESC LIMIT 20";
                   $result = $conn->query($sql);
                   if ($result->num_rows > 0) {
                       while($row = $result->fetch_assoc()) {
@@ -71,7 +72,10 @@
                     <p style="color:#333 !important">
                       <span class="text-muted">Name :</span><?php echo $row["name"] ?><br>
                       <span class="text-muted">Description :</span><?php echo $row["content"] ?><br>
-                      <span class="text-muted">Date :</span><?php echo $row["ac_date"] ?>
+                      <span class="text-muted">Date :</span>
+                      <script>
+                        document.write(moment("<?php echo($row["ac_date"])?>").format('ll'))
+                      </script>
                     </p>
                   </li>
                   <?php }} ?>
@@ -81,7 +85,7 @@
                 <h2 class="text-muted" style="font-size:18px !important;font-weight:600">Staff Achievements</h2>
                 <ul>
                   <?php
-                  $sql = "SELECT * FROM ac WHERE dept='$department' AND title='staff' order by id DESC";
+                  $sql = "SELECT * FROM ac WHERE dept='$department' AND title='staff' order by id DESC LIMIT 20";
                   $result = $conn->query($sql);
                   if ($result->num_rows > 0) {
                       while($row = $result->fetch_assoc()) {
@@ -90,7 +94,10 @@
                     <p style="color:#333 !important">
                       <span class="text-muted">Name :</span><?php echo $row["name"] ?><br>
                       <span class="text-muted">Description :</span><?php echo $row["content"] ?><br>
-                      <span class="text-muted">Date :</span><?php echo $row["ac_date"] ?>
+                      <span class="text-muted">Date :</span>
+                      <script>
+                        document.write(moment("<?php echo($row["ac_date"])?>").format('ll'))
+                      </script>
                     </p>
                   </li>
                   <?php }} ?>
@@ -107,7 +114,7 @@
           <article class="container pt-2">
             <ul class="timeline">
               <?php 
-              $sql = "SELECT * FROM sem WHERE dept='$department' order by id DESC";
+              $sql = "SELECT * FROM sem WHERE dept='$department' order by id DESC LIMIT 20";
               $result = $conn->query($sql);
               if ($result->num_rows > 0) {
                   while($row = $result->fetch_assoc()) {
@@ -117,7 +124,13 @@
                   <span class="text-muted">Event :</span><?php echo $row['name'] ?><br>
                   <span class="text-muted">Guest Name :</span><?php echo $row['guest'] ?><br>
                   <span class="text-muted">Organized by:</span><?php echo $row['org'] ?><br>
-                  <span class="text-muted">Date:</span><?php echo($row['start_date']." - ".$row['end_date']) ?>
+                  <span class="text-muted">Date:</span>
+                  <script>
+                    document.write(moment("<?php echo($row["start_date"])?>").format('ll'))
+                  </script> - 
+                  <script>
+                    document.write(moment("<?php echo($row["end_date"])?>").format('ll'))
+                  </script>
                 </p>
               </li>
               <?php }} ?>
@@ -131,7 +144,7 @@
             <article class="container pt-2">
               <ul class="timeline">
                 <?php
-                $sql = "SELECT * FROM mou WHERE dept='$department' order by id DESC ";
+                $sql = "SELECT * FROM mou WHERE dept='$department' order by id DESC LIMIT 20";
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
@@ -163,8 +176,8 @@
                 <h5 style="color:#fff">Contact Us</h5>
                 <p class="small text-white">
                   A.S Nagar, Elupatti, Thanjavur - 613 403, Tamil Nadu.<br>
-                  9444395284, 9150076739<br>
-                  sjcet.tnj@gmail.com
+                  Mobile No : 9444395284, 9150076739<br>
+                  Email : sjcet.tnj@gmail.com
                 </p>
             </div>
             <div class="col-lg-3 col-md-6">

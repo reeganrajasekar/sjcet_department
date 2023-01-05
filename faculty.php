@@ -15,7 +15,7 @@
 <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg " style="z-index:10000;background:white;box-shadow:1px 1px 2px #aaa;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="">
+      <a class="navbar-brand" href="http://sjcettnj.edu.in">
         <img src="/static/images/logo.png" alt="College Logo" class="col-logo">
       </a>
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -86,8 +86,8 @@
                 <h5 style="color:#fff">Contact Us</h5>
                 <p class="small text-white">
                   A.S Nagar, Elupatti, Thanjavur - 613 403, Tamil Nadu.<br>
-                  9444395284, 9150076739<br>
-                  sjcet.tnj@gmail.com
+                  Mobile No : 9444395284, 9150076739<br>
+                  Email : sjcet.tnj@gmail.com
                 </p>
             </div>
             <div class="col-lg-3 col-md-6">

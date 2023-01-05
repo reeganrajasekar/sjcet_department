@@ -15,7 +15,7 @@
 <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg " style="z-index:10000;background:white;box-shadow:1px 1px 2px #aaa;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="">
+      <a class="navbar-brand" href="http://sjcettnj.edu.in">
         <img src="/static/images/logo.png" alt="College Logo" class="col-logo">
       </a>
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,27 +53,21 @@
 
   <main style="margin-top:76px">
     <section class="container pt-4">
-    <h1 class="heading container">Our Curriculum</h1>
+    <h1 class="heading container">Curriculum</h1>
       <div class="container pt-4">
         <ul class="timeline">
           <?php
-          $sql = "SELECT DISTINCT reg FROM sub WHERE dept='$department'";
+          $sql = "SELECT * FROM sub WHERE dept='$department' ORDER BY reg DESC";
           $result = $conn->query($sql);
           if ($result->num_rows > 0) {
               while($row = $result->fetch_assoc()) {
           ?>
           <li class="timeline-item mb-5">
             <h5 class="fw-bold" style="color:darkred;">Regulation - <?php echo $row['reg']?></h5>
-            <ul class="text-muted">
-              <?php
-              $reg = $row['reg'];
-              $sql1 = "SELECT * FROM sub WHERE reg='$reg' AND dept='$department' order by sem ASC ,type DESC";
-              $result1 = $conn->query($sql1);
-              if ($result1->num_rows > 0) {
-                  while($row1 = $result1->fetch_assoc()) {
-              ?>
-                <li>Semester <?php echo $row1['sem']?> - <?php echo $row1['code']?> - <?php echo $row1['name']?> (<?php echo $row1['type']?>)</li>
-              <?php }} ?>
+            <ul class="container text-muted">
+              <li><a href="/static/uploads/reg/reg/<?php echo $row['reg_file']?>" target="blank">Regulations</a></li>
+              <li><a href="/static/uploads/reg/sy/<?php echo $row['sy_file']?>" target="blank">Syllabus</a></li>
+              <li><a href="/static/uploads/reg/oe/<?php echo $row['oe_file']?>" target="blank">Open Electives</a></li>
             </ul>
           </li>
           <?php }} ?>
@@ -89,8 +83,8 @@
                 <h5 style="color:#fff">Contact Us</h5>
                 <p class="small text-white">
                   A.S Nagar, Elupatti, Thanjavur - 613 403, Tamil Nadu.<br>
-                  9444395284, 9150076739<br>
-                  sjcet.tnj@gmail.com
+                  Mobile No : 9444395284, 9150076739<br>
+                  Email : sjcet.tnj@gmail.com
                 </p>
             </div>
             <div class="col-lg-3 col-md-6">

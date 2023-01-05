@@ -9,13 +9,14 @@
   <link rel="stylesheet" href="/static/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/style.css">
   <link rel="icon" href="/static/images/favicon.png">
+  <script src="/static/js/moment.js"></script>
 </head>
 
 <body>
 <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg " style="z-index:10000;background:white;box-shadow:1px 1px 2px #aaa;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="">
+      <a class="navbar-brand" href="http://sjcettnj.edu.in">
         <img src="/static/images/logo.png" alt="College Logo" class="col-logo">
       </a>
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,12 +58,16 @@
       <article style="width:100%;border:1px solid #f0f0f0;border-radius:10px;background-color:#f5f5f5;padding:10px">
         <ul >
           <?php
-          $sql = "SELECT * FROM news WHERE dept='$department' order by id DESC";
+          $sql = "SELECT * FROM news WHERE dept='$department' order by news_date DESC LIMIT 20";
           $result = $conn->query($sql);
           if ($result->num_rows > 0) {
               while($row = $result->fetch_assoc()) {
           ?>
-            <li><span><?php echo $row['news_date']?> - </span><a target="blank" href="/static/uploads/<?php echo $row['pdf']?>"><?php echo $row['title']?></a></li>
+            <li class="pb-4"><span>
+              <script>
+                document.write(moment("<?php echo($row["news_date"])?>").format('ll'))
+              </script>
+              - </span><a target="blank" href="/static/uploads/<?php echo $row['pdf']?>"><?php echo $row['title']?></a></li>
           <?php }} ?>
         </ul>
       </article>
@@ -73,22 +78,28 @@
       <article class="container pt-3">
         <div class="row">
           <?php
-          $sql = "SELECT * FROM event WHERE dept='$department' order by id DESC";
+          $sql = "SELECT * FROM event WHERE dept='$department' order by event_date DESC LIMIT 20";
           $result = $conn->query($sql);
           if ($result->num_rows > 0) {
               while($row = $result->fetch_assoc()) {
           ?>
-          <div class="col-sm-12 col-md-6 col-lg-3 pb-4">
-            <a href="/static/uploads/event/<?php echo $row['pdf']?>" target="blank"  style="color:#444;text-decoration:none !important;">
-              <div class="card shadow" style="width:100%">
-                <img loading="lazy" src="/static/uploads/event/image/<?php echo $row['img']?>" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center"><?php echo $row['title']?></h5>
-                  <p class="text-muted text-center"><?php echo $row['event_date']?></p>
-                </div>
+          <article class="col-sm-12 col-md-6 col-lg-3">
+            <div class="event" title="<?php echo $row['title']?>">
+              <div class="eventimg">
+                <img src="/static/uploads/event/image/<?php echo $row['img']?>" alt="" loading="lazy">
               </div>
-            </a>
-          </div>
+              <div class="eve">
+                <a href="/static/uploads/event/<?php echo $row['pdf']?>" target="blank" style="text-decoration:none">
+                  <p class="eventp"><?php echo substr($row['title'],0,40).'...'?></p>
+                </a>
+                <p class="eventpdate">
+                  <script>
+                    document.write(moment("<?php echo($row["event_date"])?>").format('ll'))
+                  </script>
+                </p>
+              </div>
+            </div>
+          </article>
           <?php }} ?>
         </div>
       </article>
@@ -103,8 +114,8 @@
                 <h5 style="color:#fff">Contact Us</h5>
                 <p class="small text-white">
                   A.S Nagar, Elupatti, Thanjavur - 613 403, Tamil Nadu.<br>
-                  9444395284, 9150076739<br>
-                  sjcet.tnj@gmail.com
+                  Mobile No : 9444395284, 9150076739<br>
+                  Email : sjcet.tnj@gmail.com
                 </p>
             </div>
             <div class="col-lg-3 col-md-6">

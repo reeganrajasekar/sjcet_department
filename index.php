@@ -9,13 +9,14 @@
   <link rel="stylesheet" href="/static/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/style.css">
   <link rel="icon" href="/static/images/favicon.png">
+  <script src="/static/js/moment.js"></script>
 </head>
 
 <body>
 <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg " style="z-index:10000;background:white;box-shadow:1px 1px 2px #aaa;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="">
+      <a class="navbar-brand" href="http://sjcettnj.edu.in">
         <img src="/static/images/logo.png" alt="College Logo" class="col-logo">
       </a>
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,7 +102,7 @@
     <section style="background-color: #f5f5f5;">
       <article class="container pt-2 pb-2" >
         <br>
-        <h1 class="heading">PROGRAMS WE OFFER</h1>
+        <h1 class="heading">PROGRAM WE OFFER</h1>
         <article class="container">
           <ol style="color: #922521;font-weight: 800;font-size: 21px;">
             <li >
@@ -117,14 +118,6 @@
                  industry.
               </p>
             </li>
-            <li >
-              <h2 class="program">M.E. CSE</h2>
-              <p class="content">
-                Learners are matured in a specific area of specialization by extending their prior 
-                knowhow through meticulous set of advanced courses with a dissertation to showcase 
-                their research potential. The focus for thesis is to solve an industry centric problem.
-              </p>
-            </li>
           </ol>
         </article>
       </article>
@@ -135,30 +128,37 @@
           <div class="events">
             <h1 class="heading">Latest Events @ CSE-SJCET</h1>
             <section class="row gx-2 mx-1">
-              <article class="col-sm-12 col-md-12 col-lg-4 mb-1" style="display: flex;flex-direction: column;justify-content: space-around;align-items:center;">
-                <p style="padding-top: 10px;text-align: left;">Learners are matured in a specific area of specialization by extending their
-                   prior knowhow through meticulous set of advanced
-                </p>
-                <a class="btn text-center" style="color:#922521;border:2px solid #922521;border-radius: 15px;;" href="/news&events.php#event">View Events</a>
-              </article>
+              
               <?php
-              $sql = "SELECT * FROM event WHERE dept='$department' order by id DESC LIMIT 2";
+              $sql = "SELECT * FROM event WHERE dept='$department' order by event_date DESC LIMIT 2";
               $result = $conn->query($sql);
               if ($result->num_rows > 0) {
                   while($row = $result->fetch_assoc()) {
               ?>
               <article class="col-sm-12 col-md-6 col-lg-4 mb-1">
-                <div class="event">
+                <div class="event" title="<?php echo $row['title']?>">
                   <div class="eventimg">
                     <img src="/static/uploads/event/image/<?php echo $row['img']?>" alt="" loading="lazy">
                   </div>
-                  <a href="/static/uploads/event/<?php echo $row['pdf']?>" target="blank" style="text-decoration:none">
-                    <p class="eventp"><?php echo $row['title']?></p>
-                  </a>
-                  <p class="eventpdate"><?php echo $row['event_date']?></p>
+                  <div class="eve">
+                    <a href="/static/uploads/event/<?php echo $row['pdf']?>" target="blank" style="text-decoration:none">
+                      <p class="eventp"><?php echo substr($row['title'],0,40).'...'?></p>
+                    </a>
+                    <p class="eventpdate">
+                      <script>
+                        document.write(moment("<?php echo($row["event_date"])?>").format('ll'))
+                      </script>
+                    </p>
+                  </div>
                 </div>
               </article>
               <?php }} ?>
+              <article class="col-sm-12 col-md-12 col-lg-4 mb-1" style="display: flex;flex-direction: column;justify-content: space-around;align-items:center;">
+                <p style="padding-top: 10px;text-align: left;">Learners are matured in a specific area of specialization by extending their
+                   prior knowhow through meticulous set of advanced
+                </p>
+                <a class="btn text-center" style="color:#922521;border:2px solid #922521;border-radius: 15px;;" href="/news&events.php#event">View All Events</a>
+              </article>
             </section>
           </div>
         </article>
@@ -169,12 +169,17 @@
             <div class="holder">
               <ul id="ticker01">
                 <?php
-                $sql = "SELECT * FROM news WHERE dept='$department' order by id DESC";
+                $sql = "SELECT * FROM news WHERE dept='$department' order by news_date DESC LIMIT 10";
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
                 ?>
-                <li><span><?php echo $row['news_date']?> - </span><a target="blank" href="/static/uploads/<?php echo $row['pdf']?>"><?php echo $row['title']?></a></li>
+                <li>
+                  <span>
+                    <script>
+                      document.write(moment("<?php echo($row["news_date"])?>").format('ll'))
+                    </script>
+                  - </span><a target="blank" href="/static/uploads/<?php echo $row['pdf']?>"><?php echo $row['title']?></a></li>
                 <?php }} ?>
               </ul>
             </div>
@@ -192,8 +197,8 @@
                 <h5 style="color:#fff">Contact Us</h5>
                 <p class="small text-white">
                   A.S Nagar, Elupatti, Thanjavur - 613 403, Tamil Nadu.<br>
-                  9444395284, 9150076739<br>
-                  sjcet.tnj@gmail.com
+                  Mobile No : 9444395284, 9150076739<br>
+                  Email : sjcet.tnj@gmail.com
                 </p>
             </div>
             <div class="col-lg-3 col-md-6">

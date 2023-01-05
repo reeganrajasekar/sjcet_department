@@ -29,7 +29,7 @@ nav{
 }
 @media screen and (min-width: 1024px) {
   .col-logo {
-    height: 50px;
+    height: 60px;
   }
 }
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -128,8 +128,8 @@ nav{
 .carousel-indicators [data-bs-target]{
     background-color:#ffffffdd;
     border: 2px solid #ffd;
-    width:13px !important;
-    height:13px !important;
+    width:10px !important;
+    height:10px !important;
     margin:3px;
     border-radius: 100% !important;
 }
@@ -165,21 +165,39 @@ nav{
   box-shadow: 2px 4px 4px #f0f0f0;
   border-radius: 7px;
   padding: 10px;
-  min-height: 325px;
 }
 .event{
   border:1px solid #ddd;
   box-shadow: 2px 4px 8px #ddd;
   margin:5px;
   border-radius: 7px;
+  min-height: 257px;
+  max-height: 257px;
+  position: relative;
+  overflow: hidden;
+}
+.eve{
+  position:absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height:100px;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 0px 0px 7px 7px;
 }
 .eventimg{
-  height: 150px;
+  width:100%;
   overflow: hidden;
   border-radius: 7px 7px 0px 0px;
 }
 .eventimg img {
   transition: transform .9s ease;
+  width:auto;
+  margin: 0px auto;
+  height:160px
 }
 .eventimg:hover img {
   transform: scale(1.5);
@@ -283,4 +301,6 @@ nav{
   border:1px solid #ddd;
   border-radius: 15px;
   box-shadow: 2px 2px 4px #ccc;
+  width:132px;
+  height:170px;
 }

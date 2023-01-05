@@ -15,7 +15,7 @@
 <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg " style="z-index:10000;background:white;box-shadow:1px 1px 2px #aaa;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="">
+      <a class="navbar-brand" href="http://sjcettnj.edu.in">
         <img src="/static/images/logo.png" alt="College Logo" class="col-logo">
       </a>
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,9 +65,9 @@
           <div class="col-sm-12 col-md-3 col-lg-4 pb-4">
             <a href="/static/uploads/lab/<?php echo $row["pdf"]?>" target="blank"  style="color:gray;text-decoration:none !important;">
               <div class="card shadow" style="width:100%">
-                <img loading="lazy" src="/static/uploads/lab/image/<?php echo $row["img"]?>" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center"><?php echo $row["name"]?></h5>
+                <img loading="lazy" src="/static/uploads/lab/image/<?php echo $row["img"]?>" class="card-img-top" width="100%" height="200px">
+                <div class="card-body" style="min-height:100px">
+                  <h6 class="card-title text-center"><?php echo $row["name"]?></h6>
                 </div>
               </div>
             </a>
@@ -85,8 +85,8 @@
                 <h5 style="color:#fff">Contact Us</h5>
                 <p class="small text-white">
                   A.S Nagar, Elupatti, Thanjavur - 613 403, Tamil Nadu.<br>
-                  9444395284, 9150076739<br>
-                  sjcet.tnj@gmail.com
+                  Mobile No : 9444395284, 9150076739<br>
+                  Email : sjcet.tnj@gmail.com
                 </p>
             </div>
             <div class="col-lg-3 col-md-6">

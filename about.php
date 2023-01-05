@@ -15,7 +15,7 @@
 <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg " style="z-index:10000;background:white;box-shadow:1px 1px 2px #aaa;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="">
+      <a class="navbar-brand" href="http://sjcettnj.edu.in">
         <img src="/static/images/logo.png" alt="College Logo" class="col-logo">
       </a>
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,7 +102,7 @@
       <h1 class="heading">MESSAGE FROM DEPARTMENT HOD</h1>
       <div class="container">
       <article class="row">
-        <div class="col-sm-12 col-md-12 col-lg-3 pt-2 pb-2">
+        <div class="col-sm-12 col-md-12 col-lg-4 pt-2 pb-2">
           <div style="display:flex;align-items:center;flex-direction:column;height:100%;justify-content:center">
             <?php
             $sql = "SELECT * FROM staff WHERE place='1' AND dept='$department' limit 1";
@@ -110,12 +110,16 @@
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
             ?>
-              <img src="/static/uploads/staff/image/<?php echo $row['pic'] ?>" width="100%" height="auto" class="hod-img" alt="">
-            <?php }} ?>
-            <p class="hod">Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,</p>
+              <img src="/static/uploads/staff/image/<?php echo $row['pic'] ?>" width="80%" height="auto" class="hod-img" alt="">
+              <p class="hod">
+                <?php echo $row['name'] ?><br>
+                <span class="text-muted"><?php echo $row['position'] ?></span><br>
+                <span class="text-muted">Email : <?php echo $row['email'] ?></span>
+              </p>
+              <?php }} ?>
           </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-9 pt-2 pb-2">
+        <div class="col-sm-12 col-md-12 col-lg-8 pt-2 pb-2">
           <p class="content">
             &ensp;&ensp;The CSE Department at SJCET has been continuously fostering for academic excellence 
             through industry academy collaboration as we believe in Thinking, Innovation and Creativity 
@@ -263,8 +267,8 @@
                 <h5 style="color:#fff">Contact Us</h5>
                 <p class="small text-white">
                   A.S Nagar, Elupatti, Thanjavur - 613 403, Tamil Nadu.<br>
-                  9444395284, 9150076739<br>
-                  sjcet.tnj@gmail.com
+                  Mobile No : 9444395284, 9150076739<br>
+                  Email : sjcet.tnj@gmail.com
                 </p>
             </div>
             <div class="col-lg-3 col-md-6">
