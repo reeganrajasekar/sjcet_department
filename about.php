@@ -51,6 +51,71 @@
   </nav>
 
   <main style="margin-top:76px">
+    <section class="container pt-4 pb-4">
+      <h1 class="heading">ABOUT THE DEPARTMENT</h1>
+      <article class="container">
+        <p class="content">
+          &ensp;&ensp;The department was started during the academic year 2007-2008 with approval from AICTE and 
+          affiliation from Anna University Chennai to formulate proficient professionals to become part 
+          of the engineering and research association at the worldwide levels. The department has experienced 
+          faculty members with different specialization in Computer Science and Engineering. The department 
+          provides placement opportunities in well-established organizations and MNCs.
+        </p>
+        <p class="content">
+          &ensp;&ensp;Students are trained both quantitatively and qualitatively during the lab session that enhance 
+          their understanding and helps further to motivate them to taking projects and proves as a helping 
+          hand to do their projects efficiently. Practical awareness is inculcated to the students by 
+          arranging many national conferences, Seminars, FDP and workshop in association with CSI and 
+          ICTACT. Value added programs are conducted to improve student's soft skills.
+        </p>
+        <div class="container">
+          <div class="row gx-4">
+            <div class="col-sm-12 col-md-12 col-lg-6 mb-2">
+              <div class="vision">
+                hii
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6 mb-2">
+              <div class="vision">
+                hii
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="container pb-4">
+      <h1 class="heading">MESSAGE FROM DEPARTMENT HOD</h1>
+      <div class="container">
+      <article class="row">
+        <div class="col-sm-12 col-md-12 col-lg-3 pt-2 pb-2">
+          <div style="display:flex;align-items:center;flex-direction:column;height:100%;justify-content:center">
+            <img src="/static/images/hod.jpg" width="100%" height="auto" class="hod-img" alt="">
+            <p class="hod">Dr. S. Mangaiarkarasi B.E., M.Tech., Ph.D.,</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-9 pt-2 pb-2">
+          <p class="content">
+            &ensp;&ensp;The CSE Department at SJCET has been continuously fostering for academic excellence 
+            through industry academy collaboration as we believe in Thinking, Innovation and Creativity 
+            and create future computer scientists, engineers, IT professionals and responsible citizens 
+            to serve the growing needs of computing in the society.
+          <p>
+          <p class="content">
+            &ensp;&ensp;The Department is dedicated and committed to education, with equal emphasis on high quality 
+            research and teaching in computer science and engineering.
+          </p>
+          <p class="content">
+            &ensp;&ensp;Our faculty members aim at delivering top class education blending their rich research 
+            experience with classroom teaching. The department motivates the staff members to pursue 
+            higher studies and encourage them to attend conferences, workshops and publish papers in 
+            national / international conferences/journals.The department of CSE provides platform for 
+            the students to achieve their career goals and it is a pleasure to be the head of CSE department.
+          </p>
+        </div>
+      </article>
+      </div>
+    </section>
     
   </main>
 
