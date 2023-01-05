@@ -70,14 +70,27 @@
         </p>
         <div class="container">
           <div class="row gx-4">
-            <div class="col-sm-12 col-md-12 col-lg-6 mb-2">
+            <div class="col-sm-12 col-md-12 col-lg-6 mb-3">
               <div class="vision">
-                hii
+                <img src="/static/images/vision.png" alt="vision">
+                <h3>VISION</h3>
+                <p style="text-align:justify !important;" class="container" >
+                  To impart high quality technical education and thereby facilitating, equipping students 
+                  with latest skills in the field of computer science supplemented with practical orientation 
+                  to face challenges in the modern computing industry and academia for the betterment of 
+                  the society.
+                </p>
               </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-6 mb-2">
+            <div class="col-sm-12 col-md-12 col-lg-6 mb-3">
               <div class="vision">
-                hii
+                <img src="/static/images/mission.png" alt="mission">
+                <h3>MISSION</h3>
+                <p style="text-align:justify !important;" class="container" >
+                  To develop innovative, competent and quality computer engineers by imparting the state-of-the-art technology.
+                  To enrich the knowledge of students through value based education.
+                  To endeavor for constant up gradation of technical expertise to cater to the needs of the society.
+                </p>
               </div>
             </div>
           </div>
