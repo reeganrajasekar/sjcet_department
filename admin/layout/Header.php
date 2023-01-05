@@ -38,7 +38,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link <?php if($_SERVER['PHP_SELF'] == '/admin/subject.php'){ echo 'active'; } ?>" href="/admin/subject.php?page=1">Subject</a>
+                        <a class="nav-link <?php if($_SERVER['PHP_SELF'] == '/admin/curriculum.php'){ echo 'active'; } ?>" href="/admin/curriculum.php?page=1">Curriculum</a>
                     </li>
 
                     <li class="nav-item">

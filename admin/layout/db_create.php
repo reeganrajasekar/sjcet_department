@@ -4,11 +4,10 @@ require("./db.php");
 //  Sub
 $sql = "CREATE TABLE sub (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(500) NOT NULL,
-    code VARCHAR(500) NOT NULL,
-    sem INT(5) NOT NULL,
     reg INT(5) NOT NULL,
-    type VARCHAR(10) NOT NULL,
+    reg_file VARCHAR(125),
+    sy_file VARCHAR(125),
+    oe_file VARCHAR(125),
     dept VARCHAR(10) NOT NULL,
     reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )";
