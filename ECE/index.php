@@ -86,7 +86,7 @@
 
   <main>
     <section class="container mt-2 mb-2">
-      <h1 class="welcome">DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING</h1>
+      <h1 class="welcome">DEPARTMENT OF ELECTRONICS & COMMUNICATION ENGINEERING</h1>
       <p  class="content">
         &ensp;&ensp;Department of Electronics & Communication Engineering was established in the year 2007, 
         recognized by AICTE, New Delhi and affiliated to Anna University, Chennai with an intake of 90. 
@@ -121,7 +121,7 @@
     </section>
     <section class="container mt-2">
       <div class="row gx-2">
-        <article class="col-sm-12 col-md-12 col-lg-8 mb-2" data-aos="fade-right" data-aos-once="true">
+        <article class="col-sm-12 col-md-12 col-lg-8 mb-2" data-aos="zoom-in" data-aos-once="true">
           <div class="events">
             <h1 class="heading">Latest Events @ ECE-SJCET</h1>
             <section class="row gx-2 mx-1">
@@ -159,7 +159,7 @@
             </section>
           </div>
         </article>
-        <article class="col-sm-12 col-md-12 col-lg-4 mb-2" data-aos="fade-left" data-aos-once="true">
+        <article class="col-sm-12 col-md-12 col-lg-4 mb-2" data-aos="zoom-in" data-aos-once="true">
           <div class="news">
             <h1 class="heading">Department News</h1>
             <hr>
@@ -187,7 +187,7 @@
     </section>
   </main>
 
-  <footer class="w-100 pt-4 mt-2 flex-shrink-0" style="background-color: #444;">
+  <footer class="container-fluid pt-4 mt-2 " style="background-color: #444;">
     <div class="container">
         <div class="row gy-2 gx-5">
             <div class="col-lg-5 col-md-6">

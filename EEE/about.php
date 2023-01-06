@@ -65,7 +65,7 @@
         </p>
         <div class="container">
           <div class="row gx-4">
-            <div class="col-sm-12 col-md-12 col-lg-6 mb-3"  data-aos="fade-right" data-aos-once="true">
+            <div class="col-sm-12 col-md-12 col-lg-6 mb-3"  data-aos="zoom-in" data-aos-once="true">
               <div class="vision">
                 <img src="/static/images/vision.png" alt="vision">
                 <h3>VISION</h3>
@@ -76,7 +76,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-6 mb-3"  data-aos="fade-left" data-aos-once="true">
+            <div class="col-sm-12 col-md-12 col-lg-6 mb-3"  data-aos="zoom-in" data-aos-once="true">
               <div class="vision">
                 <img src="/static/images/mission.png" alt="mission">
                 <h3>MISSION</h3>
@@ -257,7 +257,7 @@
     
   </main>
 
-  <footer class="w-100 pt-4 mt-2 flex-shrink-0" style="background-color: #444;">
+  <footer class="container-fluid pt-4 mt-2" style="background-color: #444;">
     <div class="container">
         <div class="row gy-2 gx-5">
             <div class="col-lg-5 col-md-6">

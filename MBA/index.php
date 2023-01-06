@@ -86,7 +86,7 @@
 
   <main>
     <section class="container mt-2 mb-2">
-      <h1 class="welcome">DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING</h1>
+      <h1 class="welcome">DEPARTMENT OF MANAGEMENT STUDIES</h1>
       <p  class="content">
         &ensp;&ensp;The MBA department was started in the year 2008 with an intake of 120. It is approved by AICTE, New Delhi and affiliated to Anna University, Chennai. The Department offers MBA in Finance, Marketing, Human Resources and Systems & Operations. The department provides a new approach to leadership, emphasizing a proactive, entrepreneurial and responsible way of thinking and acting. We also provides extensive opportunities to apply theory in practice, through project work based on organization.
       </p>
@@ -124,7 +124,7 @@
                   while($row = $result->fetch_assoc()) {
               ?>
               <article class="col-sm-12 col-md-6 col-lg-4 mb-1">
-                <div class="event" title="<?php echo $row['title']?>" data-aos="fade-in" data-aos-once="true">
+                <div class="event" title="<?php echo $row['title']?>" data-aos="zoom-in" data-aos-once="true">
                   <div class="eventimg">
                     <img src="/static/uploads/event/image/<?php echo $row['img']?>" alt="" loading="lazy">
                   </div>
@@ -150,7 +150,7 @@
             </section>
           </div>
         </article>
-        <article class="col-sm-12 col-md-12 col-lg-4 mb-2" data-aos="fade-left" data-aos-once="true">
+        <article class="col-sm-12 col-md-12 col-lg-4 mb-2" data-aos="zoom-in" data-aos-once="true">
           <div class="news">
             <h1 class="heading">Department News</h1>
             <hr>
@@ -178,7 +178,7 @@
     </section>
   </main>
 
-  <footer class="w-100 pt-4 mt-2 flex-shrink-0" style="background-color: #444;">
+  <footer class="container-fluid pt-4 mt-2" style="background-color: #444;">
     <div class="container">
         <div class="row gy-2 gx-5">
             <div class="col-lg-5 col-md-6">
