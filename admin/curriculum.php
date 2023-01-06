@@ -10,7 +10,7 @@
     <div style="display:flex;flex-direction:row;justify-content:space-between">
         <h2 style="color:#922521;font-weight:600">Regulations</h2>
         <button type="button" class="btn btn-primary" style="color:white;background:#922521;font-weight:600" data-bs-toggle="modal" data-bs-target="#myModal">
-            Add Subject
+            Add Regulation
         </button>
     </div>
     <br>  

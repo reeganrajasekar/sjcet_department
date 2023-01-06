@@ -1,5 +1,10 @@
 <?php 
-
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
 require("../layout/db.php");
 $file_name = strtotime("now").$_FILES["pdf"]["name"];
 $target_dir = "../../static/uploads/lab/";
@@ -39,7 +44,7 @@ if ($uploadOk == 0) {
 } else {
   if (move_uploaded_file($_FILES["pdf"]["tmp_name"], $target_file)) {
     if (move_uploaded_file($_FILES["img"]["tmp_name"], $imgtarget_file)) {
-        $name = $_POST['name'];
+        $name = test_input($_POST['name']);
         $sql = "INSERT INTO lab (name , pdf , img , dept)
         VALUES ('$name' ,'$file_name','$imgfile_name', '$department')";
     

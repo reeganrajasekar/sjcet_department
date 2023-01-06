@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/static/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/style.css">
   <link rel="icon" href="/static/images/favicon.png">
+  <link rel="stylesheet" href="/static/css/aos.css">
 </head>
 
 <body>
@@ -61,7 +62,7 @@
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
         ?>
-        <div class="col-sm-12 col-md-12 col-lg-3 text-center ">
+        <div class="col-sm-12 col-md-12 col-lg-3 text-center "  data-aos="fade-up" data-aos-once="true">
           <a href="/static/uploads/staff/<?php echo $row['pdf']?>" target="blank" style="text-decoration:none">
             <img src="/static/uploads/staff/image/<?php echo $row['pic']?>" loading="lazy" class="staff" alt="">
             <p class="text-muted pt-2">
@@ -69,7 +70,7 @@
               <br>
               <?php echo $row['position']?>
               <br>
-              <?php echo $row['email']?>
+              Email : <?php echo $row['email']?>
 
             </p>
           </a>
@@ -113,8 +114,12 @@
   </footer>
 
 
-  <script src="/static/js/bootstrap.bundle.js"></script>
-  <script src="/static/js/jquery.min.js"></script>
-  <script src="/static/script.js"></script>
+  <script type="text/javascript" src="/static/js/bootstrap.bundle.js" defer></script>
+  <script type="text/javascript" src="/static/js/jquery.min.js" defer></script>
+  <script type="text/javascript" src="/static/script.js" defer></script>
+  <script type="text/javascript" src="/static/js/aos.js" ></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

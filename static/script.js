@@ -1,3 +1,4 @@
+
 jQuery.fn.liScroll = function(settings) {
 	settings = jQuery.extend({travelocity: 0.06}, settings);		
     return this.each(function(){

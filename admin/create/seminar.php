@@ -1,12 +1,17 @@
 <?php 
 
 require("../layout/db.php");
-
-$name = $_POST['name'];
-$guest = $_POST['guest'];
-$org = $_POST['org'];
-$start_date = $_POST['start_date'];
-$end_date = $_POST['end_date'];
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+$name = test_input($_POST['name']);
+$guest = test_input($_POST['guest']);
+$org = test_input($_POST['org']);
+$start_date = test_input($_POST['start_date']);
+$end_date = test_input($_POST['end_date']);
 $sql = "INSERT INTO sem (name ,guest, org , start_date , end_date , dept)
 VALUES ('$name','$guest','$org','$start_date','$end_date', '$department')";
 

@@ -1,5 +1,10 @@
 <?php 
-
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 require("../layout/db.php");
 $file_name = strtotime("now").$_FILES["pdf"]["name"];
 $target_dir = "../../static/uploads/";
@@ -27,8 +32,8 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
   if (move_uploaded_file($_FILES["pdf"]["tmp_name"], $target_file)) {
-    $content = $_POST['content'];
-    $news_date = $_POST['news_date'];
+    $content = test_input($_POST['content']);
+    $news_date = test_input($_POST['news_date']);
     $sql = "INSERT INTO news (title , pdf , dept , news_date)
     VALUES ('$content' , '$file_name' , '$department' , '$news_date')";
 

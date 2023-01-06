@@ -1,5 +1,10 @@
 <?php 
-
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
 require("../layout/db.php");
 $file_name = strtotime("now").$_FILES["reg_file"]["name"];
 $target_dir = "../../static/uploads/reg/reg/";
@@ -41,7 +46,7 @@ if ($uploadOk == 0) {
   if (move_uploaded_file($_FILES["reg_file"]["tmp_name"], $target_file)) {
     if (move_uploaded_file($_FILES["oe_file"]["tmp_name"], $oetarget_file)) {
         if (move_uploaded_file($_FILES["sy_file"]["tmp_name"], $sytarget_file)) {
-            $reg = $_POST['reg'];
+            $reg = test_input($_POST['reg']);
             $sql = "INSERT INTO sub (reg , reg_file , oe_file , sy_file , dept)
             VALUES ('$reg' , '$file_name','$oefile_name','$syfile_name','$department')";
         

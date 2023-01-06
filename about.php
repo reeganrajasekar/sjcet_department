@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/static/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/style.css">
   <link rel="icon" href="/static/images/favicon.png">
+  <link href="/static/css/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -52,9 +53,9 @@
   </nav>
 
   <main style="margin-top:76px">
-    <section class="container pt-4 pb-4">
+    <section class="container pt-4 pb-4" >
       <h1 class="heading">ABOUT THE DEPARTMENT</h1>
-      <article class="container">
+      <article class="container"  data-aos="fade-up" data-aos-once="true">
         <p class="content">
           &ensp;&ensp;The department was started during the academic year 2007-2008 with approval from AICTE and 
           affiliation from Anna University Chennai to formulate proficient professionals to become part 
@@ -71,7 +72,7 @@
         </p>
         <div class="container">
           <div class="row gx-4">
-            <div class="col-sm-12 col-md-12 col-lg-6 mb-3">
+            <div class="col-sm-12 col-md-12 col-lg-6 mb-3"  data-aos="fade-right" data-aos-once="true">
               <div class="vision">
                 <img src="/static/images/vision.png" alt="vision">
                 <h3>VISION</h3>
@@ -83,7 +84,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-6 mb-3">
+            <div class="col-sm-12 col-md-12 col-lg-6 mb-3"  data-aos="fade-left" data-aos-once="true">
               <div class="vision">
                 <img src="/static/images/mission.png" alt="mission">
                 <h3>MISSION</h3>
@@ -98,7 +99,7 @@
         </div>
       </article>
     </section>
-    <section class="container">
+    <section class="container"  data-aos="fade-up" data-aos-once="true">
       <h1 class="heading">MESSAGE FROM DEPARTMENT HOD</h1>
       <div class="container">
       <article class="row">
@@ -110,16 +111,18 @@
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
             ?>
-              <img src="/static/uploads/staff/image/<?php echo $row['pic'] ?>" width="80%" height="auto" class="hod-img" alt="">
-              <p class="hod">
-                <?php echo $row['name'] ?><br>
-                <span class="text-muted"><?php echo $row['position'] ?></span><br>
-                <span class="text-muted">Email : <?php echo $row['email'] ?></span>
-              </p>
+              <img  data-aos="zoom-in" data-aos-once="true" src="/static/uploads/staff/image/<?php echo $row['pic'] ?>" width="80%" height="auto" class="hod-img" alt="">
+              <a href="/static/uploads/staff/<?php echo $row['pdf'] ?>" style="text-decoration:none;">
+                <p class="hod">
+                  <?php echo $row['name'] ?><br>
+                  <span class="text-muted"><?php echo $row['position'] ?></span><br>
+                  <span class="text-muted">Email : <?php echo $row['email'] ?></span>
+                </p>
+              </a>
               <?php }} ?>
           </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-8 pt-2 pb-2">
+        <div class="col-sm-12 col-md-12 col-lg-8 pt-2 pb-2"  data-aos="fade-up" data-aos-once="true">
           <p class="content">
             &ensp;&ensp;The CSE Department at SJCET has been continuously fostering for academic excellence 
             through industry academy collaboration as we believe in Thinking, Innovation and Creativity 
@@ -141,7 +144,7 @@
       </article>
       </div>
     </section>
-    <section class="container pb-2">
+    <section class="container pb-2"  data-aos="fade-up" data-aos-once="true">
       <h1 class="heading">Program Educational Objectives (PEOs)</h1>
       <ul class="pt-2">
         <li>
@@ -156,7 +159,7 @@
       </ul>
     </section>
 
-    <section class="container pb-2">
+    <section class="container pb-2" data-aos="fade-up" data-aos-once="true">
       <h1 class="heading">Program Specific Outcomes (PSOs)</h1>
       <ul class="pt-2">
         <li>
@@ -180,7 +183,7 @@
       </ul>
     </section>
 
-    <section class="container pb-2">
+    <section class="container pb-2" data-aos="fade-up" data-aos-once="true">
       <h1 class="heading">Program Outcomes (POs)</h1>
       <ul class="pt-2">
         <li>
@@ -294,8 +297,12 @@
   </footer>
 
 
-  <script src="/static/js/bootstrap.bundle.js"></script>
-  <script src="/static/js/jquery.min.js"></script>
-  <script src="/static/script.js"></script>
+  <script type="text/javascript" src="/static/js/bootstrap.bundle.js" defer></script>
+  <script type="text/javascript" src="/static/js/jquery.min.js" defer></script>
+  <script type="text/javascript" src="/static/script.js" defer></script>
+  <script type="text/javascript" src="/static/js/aos.js" ></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

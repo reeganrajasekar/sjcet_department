@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="/static/style.css">
   <link rel="icon" href="/static/images/favicon.png">
   <script src="/static/js/moment.js"></script>
+  <link rel="stylesheet" href="/static/css/aos.css">
+
 </head>
 
 <body>
@@ -61,7 +63,7 @@
             <ul class="timeline">
               <li class="timeline-item mb-2">
                 <h2 class="text-muted" style="font-size:18px !important;font-weight:600">Student Achievements</h2>
-                <ul>
+                <ul  data-aos="fade-up" data-aos-once="true">
                   <?php
                   $sql = "SELECT * FROM ac WHERE dept='$department' AND title='student' order by id DESC LIMIT 20";
                   $result = $conn->query($sql);
@@ -83,7 +85,7 @@
               </li>
               <li class="timeline-item mb-2">
                 <h2 class="text-muted" style="font-size:18px !important;font-weight:600">Staff Achievements</h2>
-                <ul>
+                <ul  data-aos="fade-up" data-aos-once="true">
                   <?php
                   $sql = "SELECT * FROM ac WHERE dept='$department' AND title='staff' order by id DESC LIMIT 20";
                   $result = $conn->query($sql);
@@ -119,7 +121,7 @@
               if ($result->num_rows > 0) {
                   while($row = $result->fetch_assoc()) {
               ?>
-              <li class="timeline-item mb-2">
+              <li class="timeline-item mb-2"  data-aos="fade-up" data-aos-once="true">
                 <p style="color:#333 !important">
                   <span class="text-muted">Event :</span><?php echo $row['name'] ?><br>
                   <span class="text-muted">Guest Name :</span><?php echo $row['guest'] ?><br>
@@ -142,15 +144,15 @@
           <section class="container pt-4" style="width:100% !important;">
             <h1 class="heading">MoUs</h1>
             <article class="container pt-2">
-              <ul class="timeline">
+              <ul class="timeline"  >
                 <?php
                 $sql = "SELECT * FROM mou WHERE dept='$department' order by id DESC LIMIT 20";
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     while($row = $result->fetch_assoc()) {
                 ?>
-                <a href="/static/uploads/mou/<?php echo $row['pdf']?>" style="text-decoration:none" target="blank">
-                  <li class="timeline-item mb-2">
+                <a  href="/static/uploads/mou/<?php echo $row['pdf']?>" style="text-decoration:none" target="blank">
+                  <li  data-aos="fade-up" data-aos-once="true" class="timeline-item mb-2">
                     <p style="color:#333 !important">
                       <span class="text-muted">Company Name :</span><?php echo $row['name']?><br>
                       <span class="text-muted">Details :</span><?php echo $row['content']?><br>
@@ -201,8 +203,12 @@
       <small>2023 &copy; St. Joseph's College of Engineering & Technology | All Rights Reserved | Powered By SJCET Web Team</small>
     </div>
   </footer>
-  <script src="/static/js/bootstrap.bundle.js"></script>
-  <script src="/static/js/jquery.min.js"></script>
-  <script src="/static/script.js"></script>
+  <script type="text/javascript" src="/static/js/bootstrap.bundle.js" defer></script>
+  <script type="text/javascript" src="/static/js/jquery.min.js" defer></script>
+  <script type="text/javascript" src="/static/script.js" defer></script>
+  <script type="text/javascript" src="/static/js/aos.js" ></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

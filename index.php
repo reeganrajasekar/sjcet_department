@@ -10,9 +10,10 @@
   <link rel="stylesheet" href="/static/style.css">
   <link rel="icon" href="/static/images/favicon.png">
   <script src="/static/js/moment.js"></script>
+  <link href="/static/css/aos.css" rel="stylesheet">
 </head>
 
-<body>
+<body  >
 <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg " style="z-index:10000;background:white;box-shadow:1px 1px 2px #aaa;">
     <div class="container-fluid">
@@ -99,7 +100,7 @@
         conducted to improve student's soft skills.
       </p>
     </section>
-    <section style="background-color: #f5f5f5;">
+    <section style="background-color: #f5f5f5;" data-aos="fade-up" data-aos-once="true">
       <article class="container pt-2 pb-2" >
         <br>
         <h1 class="heading">PROGRAM WE OFFER</h1>
@@ -124,7 +125,7 @@
     </section>
     <section class="container mt-2">
       <div class="row gx-2">
-        <article class="col-sm-12 col-md-12 col-lg-8 mb-2">
+        <article class="col-sm-12 col-md-12 col-lg-8 mb-2" data-aos="fade-right" data-aos-once="true">
           <div class="events">
             <h1 class="heading">Latest Events @ CSE-SJCET</h1>
             <section class="row gx-2 mx-1">
@@ -136,7 +137,7 @@
                   while($row = $result->fetch_assoc()) {
               ?>
               <article class="col-sm-12 col-md-6 col-lg-4 mb-1">
-                <div class="event" title="<?php echo $row['title']?>">
+                <div class="event" title="<?php echo $row['title']?>" data-aos="fade-in" data-aos-once="true">
                   <div class="eventimg">
                     <img src="/static/uploads/event/image/<?php echo $row['img']?>" alt="" loading="lazy">
                   </div>
@@ -162,7 +163,7 @@
             </section>
           </div>
         </article>
-        <article class="col-sm-12 col-md-12 col-lg-4 mb-2">
+        <article class="col-sm-12 col-md-12 col-lg-4 mb-2" data-aos="fade-left" data-aos-once="true">
           <div class="news">
             <h1 class="heading">Department News</h1>
             <hr>
@@ -224,8 +225,13 @@
   </footer>
 
 
-  <script src="/static/js/bootstrap.bundle.js"></script>
-  <script src="/static/js/jquery.min.js"></script>
-  <script src="/static/script.js"></script>
+ 
+  <script type="text/javascript" src="/static/js/bootstrap.bundle.js" defer></script>
+  <script type="text/javascript" src="/static/js/jquery.min.js" defer></script>
+  <script type="text/javascript" src="/static/script.js" defer></script>
+  <script type="text/javascript" src="/static/js/aos.js" ></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="/static/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/style.css">
   <link rel="icon" href="/static/images/favicon.png">
+  <link rel="stylesheet" href="/static/css/aos.css">
+
 </head>
 
 <body>
@@ -62,7 +64,7 @@
           if ($result->num_rows > 0) {
               while($row = $result->fetch_assoc()) {
           ?>
-          <li class="timeline-item mb-5">
+          <li class="timeline-item mb-5"  data-aos="fade-up" data-aos-once="true">
             <h5 class="fw-bold" style="color:darkred;">Regulation - <?php echo $row['reg']?></h5>
             <ul class="container text-muted">
               <li><a href="/static/uploads/reg/reg/<?php echo $row['reg_file']?>" target="blank">Regulations</a></li>
@@ -110,8 +112,12 @@
   </footer>
 
 
-  <script src="/static/js/bootstrap.bundle.js"></script>
-  <script src="/static/js/jquery.min.js"></script>
-  <script src="/static/script.js"></script>
+  <script type="text/javascript" src="/static/js/bootstrap.bundle.js" defer></script>
+  <script type="text/javascript" src="/static/js/jquery.min.js" defer></script>
+  <script type="text/javascript" src="/static/script.js" defer></script>
+  <script type="text/javascript" src="/static/js/aos.js" ></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

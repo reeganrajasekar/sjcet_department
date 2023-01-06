@@ -7,6 +7,12 @@ $target_file = $target_dir . basename($file_name);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 
 // Check file size
 if ($_FILES["pdf"]["size"] > 5000000) {
@@ -27,9 +33,9 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
   if (move_uploaded_file($_FILES["pdf"]["tmp_name"], $target_file)) {
-    $name = $_POST['name'];
-    $content = $_POST['content'];
-    $mou_year = $_POST['mou_year'];
+    $name = test_input($_POST['name']);
+    $content = test_input($_POST['content']);
+    $mou_year = test_input($_POST['mou_year']);
     $sql = "INSERT INTO mou (name , content , dept , pdf , mou_year)
     VALUES ('$name','$content', '$department' , '$file_name' , '$mou_year')";
 

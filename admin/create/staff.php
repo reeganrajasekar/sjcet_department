@@ -39,10 +39,10 @@ if ($uploadOk == 0) {
 } else {
   if (move_uploaded_file($_FILES["pdf"]["tmp_name"], $target_file)) {
     if (move_uploaded_file($_FILES["img"]["tmp_name"], $imgtarget_file)) {
-        $name = $_POST['name'];
-        $position = $_POST['position'];
-        $email = $_POST['email'];
-        $place = $_POST['place'];
+        $name = test_input($_POST['name']);
+        $position = test_input($_POST['position']);
+        $email = test_input($_POST['email']);
+        $place = test_input($_POST['place']);
         $sql = "INSERT INTO staff (name , position ,email , place, pdf , pic , dept)
         VALUES ('$name' , '$position','$email','$place','$file_name','$imgfile_name', '$department')";
     

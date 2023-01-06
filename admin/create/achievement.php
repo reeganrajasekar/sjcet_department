@@ -1,11 +1,16 @@
 <?php 
 
 require("../layout/db.php");
-
-$name = $_POST['name'];
-$title = $_POST['title'];
-$content = $_POST['content'];
-$ac_date = $_POST['ac_date'];
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+$name = test_input($_POST['name']);
+$title = test_input($_POST['title']);
+$content = test_input($_POST['content']);
+$ac_date = test_input($_POST['ac_date']);
 $sql = "INSERT INTO ac (name ,title, content , dept , ac_date)
 VALUES ('$name','$title','$content', '$department' , '$ac_date')";
 

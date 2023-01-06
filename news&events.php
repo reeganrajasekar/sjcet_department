@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="/static/style.css">
   <link rel="icon" href="/static/images/favicon.png">
   <script src="/static/js/moment.js"></script>
+  <link rel="stylesheet" href="/static/css/aos.css">
+
 </head>
 
 <body>
@@ -55,7 +57,7 @@
   <main class="container" style="margin-top:76px">
     <section id="news" class="pt-3 pb-2">
       <h1 class="heading">News</h1>
-      <article style="width:100%;border:1px solid #f0f0f0;border-radius:10px;background-color:#f5f5f5;padding:10px">
+      <article data-aos="fade-up" data-aos-once="true" style="width:100%;border:1px solid #f0f0f0;border-radius:10px;background-color:#f5f5f5;padding:10px">
         <ul >
           <?php
           $sql = "SELECT * FROM news WHERE dept='$department' order by news_date DESC LIMIT 20";
@@ -63,7 +65,7 @@
           if ($result->num_rows > 0) {
               while($row = $result->fetch_assoc()) {
           ?>
-            <li class="pb-4"><span>
+            <li class="pb-4" data-aos="fade-up" data-aos-once="true"><span>
               <script>
                 document.write(moment("<?php echo($row["news_date"])?>").format('ll'))
               </script>
@@ -75,7 +77,7 @@
 
     <section id="event" class="pt-3">
       <h1 class="heading">Events</h1>
-      <article class="container pt-3">
+      <article data-aos="fade-up" data-aos-once="true" class="container pt-3">
         <div class="row">
           <?php
           $sql = "SELECT * FROM event WHERE dept='$department' order by event_date DESC LIMIT 20";
@@ -83,7 +85,7 @@
           if ($result->num_rows > 0) {
               while($row = $result->fetch_assoc()) {
           ?>
-          <article class="col-sm-12 col-md-6 col-lg-3">
+          <article class="col-sm-12 col-md-6 col-lg-3"  data-aos="fade-up" data-aos-once="true">
             <div class="event" title="<?php echo $row['title']?>">
               <div class="eventimg">
                 <img src="/static/uploads/event/image/<?php echo $row['img']?>" alt="" loading="lazy">
@@ -141,8 +143,12 @@
   </footer>
 
 
-  <script src="/static/js/bootstrap.bundle.js"></script>
-  <script src="/static/js/jquery.min.js"></script>
-  <script src="/static/script.js"></script>
+  <script type="text/javascript" src="/static/js/bootstrap.bundle.js" defer></script>
+  <script type="text/javascript" src="/static/js/jquery.min.js" defer></script>
+  <script type="text/javascript" src="/static/script.js" defer></script>
+  <script type="text/javascript" src="/static/js/aos.js" ></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

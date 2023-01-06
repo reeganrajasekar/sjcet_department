@@ -1,5 +1,10 @@
 <?php 
-
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
 require("../layout/db.php");
 $file_name = strtotime("now").$_FILES["pdf"]["name"];
 $target_dir = "../../static/uploads/event/";
@@ -39,8 +44,8 @@ if ($uploadOk == 0) {
 } else {
   if (move_uploaded_file($_FILES["pdf"]["tmp_name"], $target_file)) {
     if (move_uploaded_file($_FILES["img"]["tmp_name"], $imgtarget_file)) {
-        $title = $_POST['title'];
-        $event_date = $_POST['event_date'];
+        $title = test_input($_POST['title']);
+        $event_date = test_input($_POST['event_date']);
         $sql = "INSERT INTO event (title , event_date , pdf , img , dept)
         VALUES ('$title' , '$event_date','$file_name','$imgfile_name', '$department')";
     
