@@ -1,5 +1,10 @@
 <?php 
-
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
 require("../layout/db.php");
 $file_name = strtotime("now").$_FILES["pdf"]["name"];
 $target_dir = "../../static/uploads/staff/";
